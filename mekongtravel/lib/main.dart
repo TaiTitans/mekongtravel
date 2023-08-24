@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/screens/welcome_screen.dart';
-
+import 'core/constants/dataitems_constants.dart';
 import 'core/constants/color_constants.dart';
 
 void main() {

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
+import 'package:mekongtravel/core/constants/dataitems_constants.dart';
 import 'package:mekongtravel/screens/bonus/categories_widget.dart';
 import 'package:mekongtravel/screens/bonus/popular_height_list.dart';
 import 'package:mekongtravel/screens/bonus/popular_width_list.dart';
 import 'package:mekongtravel/screens/bonus/bottom_bar.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -22,12 +24,13 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  int _selectedIndex = 0; // Khai báo và khởi tạo mặc định
+  PageController _pageController = PageController(); // Khai báo PageController
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Material(
-        color: ColorPalette.backgroundColor,
-        child: SafeArea(
+    return Scaffold(
+        body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(vertical: 30, horizontal: 25),
             child: Column(
@@ -129,14 +132,57 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(height: 18),
-                // PopularHList(),
+                Expanded(
+                  child: PopularHList(),
+                ),
               ],
             ),
           ),
-          bottomNavigationBar: BottomBarApp(),
         ),
-      ),
-    );
+        bottomNavigationBar: ClipRRect(
+          borderRadius: BorderRadius.circular(30),
+          child: BottomNavyBar(
+            backgroundColor: Color(0xFF263238),
+            selectedIndex: _selectedIndex,
+            showElevation: false,
+            containerHeight: 72,
+            onItemSelected: (index) {
+              setState(() {
+                _selectedIndex = index;
+              });
+            },
+            items: [
+              BottomNavyBarItem(
+                icon: Icon(Icons.home),
+                title: Text('Trang chủ'),
+                activeColor: ColorPalette.text,
+                inactiveColor: ColorPalette.primaryColor,
+                textAlign: TextAlign.center,
+              ),
+              BottomNavyBarItem(
+                icon: Icon(Icons.gps_fixed),
+                title: Text('Vị trí'),
+                activeColor: ColorPalette.text,
+                inactiveColor: ColorPalette.primaryColor,
+                textAlign: TextAlign.center,
+              ),
+              BottomNavyBarItem(
+                icon: Icon(Icons.restaurant),
+                title: Text('Ẩm thực'),
+                activeColor: ColorPalette.text,
+                inactiveColor: ColorPalette.primaryColor,
+                textAlign: TextAlign.center,
+              ),
+              BottomNavyBarItem(
+                icon: Icon(Icons.settings),
+                title: Text('Cài đặt'),
+                activeColor: ColorPalette.text,
+                inactiveColor: ColorPalette.primaryColor,
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ));
   }
 }
 
