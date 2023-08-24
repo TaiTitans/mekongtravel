@@ -8,3 +8,14 @@ class ColorPalette {
   static const Color primaryColor = Color(0xFF5EDFFF);
   static const Color subColorText = Color(0xFFA5A5A5);
 }
+
+// class Gradients {
+//   static const Gradient defaultGradientBackground = LinearGradient(
+//     begin: Alignment.topLeft,
+//     end: Alignment.bottomLeft,
+//     colors: [
+//       ColorPalette.backgroundColor.withOpacity(0.1),
+//       ColorPalette.backgroundColor,
+//     ],
+//   );
+// }
