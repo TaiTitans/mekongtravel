@@ -41,6 +41,9 @@ dependencies:
   clippy_flutter: ^2.0.0-nullsafety.1
   flutter_rating_bar: ^4.0.1
   bottom_navy_bar: ^6.0.0
+  group_list_view: ^1.1.1
+  readmore: ^2.2.0
+  rich_readmore: ^1.0.6
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +71,7 @@ flutter:
   - assets/images/
   - assets/images/popular/
   - assets/images/hpopular/
+  - assets/images/locationspage/
   - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see

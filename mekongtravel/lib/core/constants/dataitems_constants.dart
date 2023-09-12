@@ -30,3 +30,15 @@ const HPOPULAR_DATA = [
     "star": "4.7",
   },
 ];
+const LOCATIONSPAGE = [
+  {
+    "name": "Chọn địa điểm",
+    "distance": "Nhấn vào đây",
+    "image": "assets/images/locationspage/chooselocations.jpg",
+  },
+  {
+    "name": "Tìm xung quanh",
+    "distance": "Nhấn vào đây",
+    "image": "assets/images/locationspage/findlocations.jpg",
+  },
+];

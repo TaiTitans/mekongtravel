@@ -7,6 +7,7 @@ class ColorPalette {
   static const Color colorText = Color(0xFF263238);
   static const Color primaryColor = Color(0xFF5EDFFF);
   static const Color subColorText = Color(0xFFA5A5A5);
+  static const Color elementsColor = Color(0xFF263238);
 }
 
 // class Gradients {
