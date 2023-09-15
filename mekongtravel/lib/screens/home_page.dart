@@ -92,8 +92,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              InkWell(
-                onTap: () {},
+              Container(
                 child: Row(
                   children: [
                     Icon(

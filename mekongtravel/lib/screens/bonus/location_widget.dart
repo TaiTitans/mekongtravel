@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:mekongtravel/core/constants/dataitems_constants.dart';
+import 'package:mekongtravel/screens/aroundmaps.dart';
 import 'package:mekongtravel/screens/bonus/items_location.dart';
 import 'package:mekongtravel/screens/choose_locations.dart';
 
@@ -16,13 +17,12 @@ class LocationsItems extends StatelessWidget {
             // color: Color(0xFF263238),
             child: Row(
               children: [
-                IconButton(
-                  icon: Icon(Icons.location_pin),
+                Icon(
+                  Icons.location_pin,
                   color: Colors.white,
-                  onPressed: () {},
                 ),
                 SizedBox(
-                  width: 35,
+                  width: 10,
                 ),
                 Text(
                   'Tìm kiếm địa điểm',
@@ -123,7 +123,7 @@ class LocationsItems extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ItemLocation(),
+                              builder: (context) => SearchAroundMap(),
                             ));
                       },
                       child: Stack(
