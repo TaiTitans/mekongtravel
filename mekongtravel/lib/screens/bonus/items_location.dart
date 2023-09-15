@@ -53,7 +53,7 @@ class ItemLocation extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  bottom: 15,
+                  bottom: 24,
                   left: 10,
                   child: Container(
                     color: Colors.black.withOpacity(0.5),
@@ -61,14 +61,14 @@ class ItemLocation extends StatelessWidget {
                       'Lặn biển Phú Quốc',
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
-                        fontSize: 24,
+                        fontSize: 22,
                         color: ColorPalette.text,
                       ),
                     ),
                   ),
                 ),
                 Positioned(
-                  bottom: 15,
+                  bottom: 24,
                   right: 10,
                   child: Container(
                     // color: Colors.black.withOpacity(0.5),
@@ -127,7 +127,7 @@ class ItemLocation extends StatelessWidget {
             ),
             Container(
                 height: 1,
-                width: 311, // Chiều rộng của khối // Chiều cao 1 pixel
+                width: 330, // Chiều rộng của khối // Chiều cao 1 pixel
                 color: Color(0xFF263238) // Màu đỏ
                 ),
             SizedBox(
@@ -174,6 +174,80 @@ class ItemLocation extends StatelessWidget {
                   color: ColorPalette.primaryColor,
                 ),
               ),
+            ),
+            SizedBox(
+              height: 90,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                InkWell(
+                  onTap: () {},
+                  child: Ink(
+                    width: 160,
+                    height: 44,
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      border: Border.all(color: ColorPalette.primaryColor),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.map,
+                          color: ColorPalette.primaryColor,
+                          size: 20,
+                        ),
+                        SizedBox(
+                          width: 6,
+                        ),
+                        Text(
+                          'Bản đồ',
+                          style: TextStyle(
+                            color: ColorPalette.primaryColor,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Ink(
+                    width: 160,
+                    height: 44,
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: ColorPalette.primaryColor,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.restaurant,
+                          color: ColorPalette.elementsColor,
+                          size: 20,
+                        ),
+                        SizedBox(
+                          width: 6,
+                        ),
+                        Text(
+                          'Ẩm thực',
+                          style: TextStyle(
+                            color: ColorPalette.elementsColor,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

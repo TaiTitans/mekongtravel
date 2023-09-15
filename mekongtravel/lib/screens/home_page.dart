@@ -6,6 +6,9 @@ import 'package:mekongtravel/screens/bonus/popular_height_list.dart';
 import 'package:mekongtravel/screens/bonus/popular_width_list.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:mekongtravel/screens/locations_page.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:geolocator_android/geolocator_android.dart';
+import 'package:geocoding/geocoding.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -27,6 +30,59 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0; // Khai báo và khởi tạo mặc định
   PageController _pageController = PageController(); // Khai báo PageController
 
+//Lay thong tin vi tri hien tai
+  Position? _currentLocation;
+  late bool servicePermission = false;
+  late LocationPermission permission;
+  String _currentAddress = "";
+
+  @override
+  void initState() {
+    super.initState();
+    _getCurrentLocation();
+  }
+
+  Future<void> _getCurrentLocation() async {
+    servicePermission = await Geolocator.isLocationServiceEnabled();
+    if (!servicePermission) {
+      print("Service Disabled");
+    }
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+    }
+
+    if (permission == LocationPermission.whileInUse ||
+        permission == LocationPermission.always) {
+      final position = await Geolocator.getCurrentPosition();
+      setState(() {
+        _currentLocation = position;
+      });
+
+      if (_currentLocation != null) {
+        _getAddressFromCoordinates();
+      }
+    }
+  }
+
+  Future<void> _getAddressFromCoordinates() async {
+    try {
+      List<Placemark> placemarks = await placemarkFromCoordinates(
+        _currentLocation!.latitude,
+        _currentLocation!.longitude,
+      );
+      if (placemarks.isNotEmpty) {
+        Placemark place = placemarks[0];
+        setState(() {
+          _currentAddress =
+              "${place.name}, ${place.administrativeArea}, ${place.country}";
+        });
+      }
+    } catch (e) {
+      print("Error fetching address: $e");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     SizedBox(width: 5),
                     Text(
-                      "Ninh Kieu, Can Tho",
+                      "${_currentAddress}",
                       style: TextStyle(
                         color: ColorPalette.text,
                         fontSize: 12,
