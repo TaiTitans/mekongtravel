@@ -1,0 +1,9 @@
+{
+    "app_id": "mekongttravelapp-omjqm",
+    "config_version": 20210101,
+    "name": "mekongtTravelApp",
+    "location": "SG",
+    "provider_region": "aws-ap-southeast-1",
+    "deployment_model": "LOCAL",
+    "environment": "development"
+}
