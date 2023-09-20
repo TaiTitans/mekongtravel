@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:mekongtravel/screens/bonus/location_widget.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:mekongtravel/screens/foods_page.dart';
 import 'package:mekongtravel/screens/home_page.dart';
 
 class LocationsPage extends StatefulWidget {
@@ -47,6 +48,13 @@ class _LocationsPageState extends State<LocationsPage> {
                   // Xử lý sự kiện khi Vị trí được nhấp vào
                   // Không cần thực hiện hành động vì bạn đang ở Vị trí
                 } else if (index == 2) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          FoodsPage(), // Thay thế bằng màn hình Trang chủ thực tế
+                    ),
+                  );
                   // Xử lý sự kiện khi Ẩm thực được nhấp vào
                 } else if (index == 3) {
                   // Xử lý sự kiện khi Cài đặt được nhấp vào

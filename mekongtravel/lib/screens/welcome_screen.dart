@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:mekongtravel/screens/home_page.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -46,13 +47,21 @@ class WelcomeScreen extends StatelessWidget {
                     SizedBox(
                       height: 10,
                     ),
-                    Text(
-                      textAlign: TextAlign.justify,
-                      "Khám phá miền Tây sông nước hùng vĩ với những chuyến đi thú vị.Với sự trợ giúp của Mekong Travel sẽ khiến chuyến đi của bạn trở nên dễ dàng và thú vị hơn.Vi vu thôi ...",
-                      style: TextStyle(
-                        color: ColorPalette.secondText.withOpacity(0.7),
-                        fontSize: 16,
-                        letterSpacing: 1,
+                    SizedBox(
+                      child: DefaultTextStyle(
+                        textAlign: TextAlign.justify,
+                        style: const TextStyle(
+                          color: ColorPalette.subColorText,
+                          fontSize: 16,
+                          letterSpacing: 1,
+                        ),
+                        child: AnimatedTextKit(
+                          animatedTexts: [
+                            TypewriterAnimatedText(
+                                'Khám phá miền Tây sông nước hùng vĩ với những chuyến đi thú vị.Với sự trợ giúp của Mekong Travel sẽ khiến chuyến đi của bạn trở nên dễ dàng và thú vị hơn.Vi vu thôi ...'),
+                          ],
+                          onTap: () {},
+                        ),
                       ),
                     ),
                     SizedBox(

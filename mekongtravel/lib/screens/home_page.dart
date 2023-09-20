@@ -5,6 +5,7 @@ import 'package:mekongtravel/screens/bonus/categories_widget.dart';
 import 'package:mekongtravel/screens/bonus/popular_height_list.dart';
 import 'package:mekongtravel/screens/bonus/popular_width_list.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:mekongtravel/screens/foods_page.dart';
 import 'package:mekongtravel/screens/locations_page.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geolocator_android/geolocator_android.dart';
@@ -209,6 +210,12 @@ class _HomePageState extends State<HomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => LocationsPage(),
+                    ));
+              } else if (index == 2) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FoodsPage(),
                     ));
               }
             });

@@ -46,6 +46,7 @@ dependencies:
   rich_readmore: ^1.0.6
   geolocator: ^10.0.1
   geocoding: ^2.1.0
+  animated_text_kit: ^4.2.2
 
 dev_dependencies:
   flutter_test:
@@ -74,7 +75,6 @@ flutter:
   - assets/images/popular/
   - assets/images/hpopular/
   - assets/images/locationspage/
-  - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
