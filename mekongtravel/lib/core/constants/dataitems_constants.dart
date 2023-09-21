@@ -42,3 +42,42 @@ const LOCATIONSPAGE = [
     "image": "assets/images/locationspage/findlocations.jpg",
   },
 ];
+
+const HFOODS_DATA = [
+  {
+    "name": "Lẩu mắm",
+    "distance": "Cần Thơ",
+    "image": "assets/images/foods/CanTho/laumam.jpg",
+    "vnd": "150000",
+  },
+  {
+    "name": "Hàu nướng mỡ hành",
+    "distance": "Kiêng Giang",
+    "image": "assets/images/foods/KienGiang/haunuongmohanh.jpg",
+    "vnd": "80000",
+  },
+  {
+    "name": "Bánh pía",
+    "distance": "Sóc Trăng",
+    "image": "assets/images/foods/SocTrang/banhpia.jpg",
+    "vnd": "25000",
+  },
+  {
+    "name": "Lẩu bông điên điển",
+    "distance": "Đồng Tháp",
+    "image": "assets/images/foods/DongThap/laubongdiendien.jpg",
+    "vnd": "80000",
+  },
+  {
+    "name": "Xôi bắp",
+    "distance": "An Giang",
+    "image": "assets/images/foods/AnGiang/xoibap.jpg",
+    "vnd": "25000",
+  },
+  {
+    "name": "Cua đá rang muối",
+    "distance": "Cà Mau",
+    "image": "assets/images/foods/CaMau/cuadarangmuoi.jpg",
+    "vnd": "350000",
+  },
+];
