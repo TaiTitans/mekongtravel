@@ -85,8 +85,8 @@ class _LocationsPageState extends State<LocationsPage> {
               textAlign: TextAlign.center,
             ),
             BottomNavyBarItem(
-              icon: Icon(Icons.settings),
-              title: Text('Cài đặt'),
+              icon: Icon(Icons.cloud),
+              title: Text('Thời tiết'),
               activeColor: ColorPalette.text,
               inactiveColor: ColorPalette.primaryColor,
               textAlign: TextAlign.center,

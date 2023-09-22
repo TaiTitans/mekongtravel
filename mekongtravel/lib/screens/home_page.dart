@@ -5,6 +5,7 @@ import 'package:mekongtravel/screens/bonus/categories_widget.dart';
 import 'package:mekongtravel/screens/bonus/popular_height_list.dart';
 import 'package:mekongtravel/screens/bonus/popular_width_list.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:mekongtravel/screens/weatherpage.dart';
 import 'package:mekongtravel/screens/foods_page.dart';
 import 'package:mekongtravel/screens/locations_page.dart';
 import 'package:geolocator/geolocator.dart';
@@ -218,6 +219,12 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(
                       builder: (context) => FoodsPage(),
                     ));
+              } else if (index == 3) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => WeatherPage(),
+                    ));
               }
             });
           },
@@ -244,8 +251,8 @@ class _HomePageState extends State<HomePage> {
               textAlign: TextAlign.center,
             ),
             BottomNavyBarItem(
-              icon: Icon(Icons.settings),
-              title: Text('Cài đặt'),
+              icon: Icon(Icons.cloud),
+              title: Text('Thời tiết'),
               activeColor: ColorPalette.text,
               inactiveColor: ColorPalette.primaryColor,
               textAlign: TextAlign.center,
