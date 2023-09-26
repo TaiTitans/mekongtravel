@@ -7,6 +7,7 @@ import 'package:mekongtravel/screens/bonus/foods_popularColumnList.dart';
 import 'package:mekongtravel/screens/bonus/foods_popularRowList.dart';
 import 'package:mekongtravel/screens/home_page.dart';
 import 'package:mekongtravel/screens/locations_page.dart';
+import 'package:mekongtravel/screens/settings.dart';
 import 'package:scroll_page_view/pager/page_controller.dart';
 import 'package:scroll_page_view/pager/scroll_page_view.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
@@ -222,6 +223,13 @@ class _FoodsPageState extends State<FoodsPage> {
                 } else if (index == 2) {
                   // Xử lý sự kiện khi Ẩm thực được nhấp vào
                 } else if (index == 3) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          Settings(), // Thay thế bằng màn hình Trang chủ thực tế
+                    ),
+                  );
                   // Xử lý sự kiện khi Cài đặt được nhấp vào
                 }
               });
@@ -250,8 +258,8 @@ class _FoodsPageState extends State<FoodsPage> {
               textAlign: TextAlign.center,
             ),
             BottomNavyBarItem(
-              icon: Icon(Icons.cloud),
-              title: Text('Thời tiết'),
+              icon: Icon(Icons.settings),
+              title: Text('Cài đặt'),
               activeColor: ColorPalette.text,
               inactiveColor: ColorPalette.primaryColor,
               textAlign: TextAlign.center,

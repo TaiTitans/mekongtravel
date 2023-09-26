@@ -3,6 +3,8 @@ import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:mekongtravel/core/constants/dataitems_constants.dart';
 import 'package:flutter_draggable_gridview/flutter_draggable_gridview.dart';
 
+import '../foods_item.dart';
+
 class FoodsColumnList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,19 @@ class FoodsColumnList extends StatelessWidget {
           mainAxisExtent: 174),
       itemCount: HFOODS_DATA.length,
       itemBuilder: (_, index) {
-        return Container(
+        return GestureDetector(
+            onTap: () {
+              // Điều hướng đến FoodsItem khi người dùng nhấp vào mục
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => FoodsItem(
+                    // // Truyền dữ liệu tới màn hình FoodsItem nếu cần
+                    // foodData: HFOODS_DATA[index],
+                  ),
+                ),
+              );
+            },
+        child: Container(
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +76,7 @@ class FoodsColumnList extends StatelessWidget {
               ),
             ],
           ),
-        );
+        ));
       },
     );
   }

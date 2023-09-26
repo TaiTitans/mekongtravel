@@ -5,13 +5,14 @@ import 'package:mekongtravel/screens/bonus/categories_widget.dart';
 import 'package:mekongtravel/screens/bonus/popular_height_list.dart';
 import 'package:mekongtravel/screens/bonus/popular_width_list.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:mekongtravel/screens/weatherpage.dart';
+import 'package:mekongtravel/screens/foods_item.dart';
 import 'package:mekongtravel/screens/foods_page.dart';
 import 'package:mekongtravel/screens/locations_page.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geolocator_android/geolocator_android.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:mekongtravel/screens/settings.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -223,7 +224,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => WeatherPage(),
+                      builder: (context) => Settings(),
                     ));
               }
             });
@@ -251,8 +252,8 @@ class _HomePageState extends State<HomePage> {
               textAlign: TextAlign.center,
             ),
             BottomNavyBarItem(
-              icon: Icon(Icons.cloud),
-              title: Text('Thời tiết'),
+              icon: Icon(Icons.settings),
+              title: Text('Cài đặt'),
               activeColor: ColorPalette.text,
               inactiveColor: ColorPalette.primaryColor,
               textAlign: TextAlign.center,
