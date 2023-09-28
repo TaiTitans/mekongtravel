@@ -105,6 +105,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.3"
+  day_night_switcher:
+    dependency: "direct main"
+    description:
+      name: day_night_switcher
+      sha256: "37354e55fdc0b49d1bea863121cc5a99ab952669f4f349cdd7fe78de2e62a72a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.0+1"
   fake_async:
     dependency: transitive
     description:
@@ -268,18 +276,18 @@ packages:
     dependency: transitive
     description:
       name: geolocator_android
-      sha256: fb7fc45ce08714a17d1bb097c58b751a10c12255c35c3f64a3c6922222d93be2
+      sha256: "93906636752ea4d4e778afa981fdfe7409f545b3147046300df194330044d349"
       url: "https://pub.dev"
     source: hosted
-    version: "4.3.0"
+    version: "4.3.1"
   geolocator_apple:
     dependency: transitive
     description:
       name: geolocator_apple
-      sha256: "2c0187c84ca04fdb4e2b32a775dbe97448622a53f1c9ecb26d8b6b0df6e72b65"
+      sha256: ab90ae811c42ec2f6021e01eca71df00dee6ff1e69d2c2dafd4daeb0b793f73d
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.1"
+    version: "2.3.2"
   geolocator_platform_interface:
     dependency: transitive
     description:
@@ -432,6 +440,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  rolling_switch:
+    dependency: "direct main"
+    description:
+      name: rolling_switch
+      sha256: "28e6434d05ee135362847e6cb37f2861d724e52ad400914f8a4ef3e4935cb8dd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   scroll_page_view:
     dependency: "direct main"
     description:
