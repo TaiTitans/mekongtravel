@@ -1,9 +1,13 @@
-const app = require('./src/app')
-const PORT = process.env.PORT || 3000
-const server = app.listen(PORT, ()=>{
-    console.log(`WSV eCommerce start with ${PORT}`)
-})
+const express = require('express');
+const app = require('./src/app');
+const port = 3000;
+const UserModel = require('./src/model/user.model');
+const db = require('./src/config/db');
 
-process.on('SIGINT', ()=>{
-    server.close(()=> console.log('Exit Server Express'))
-})
+app.get('/', (req, res) => {
+    res.send('Hello');
+});
+
+app.listen(port, () => {
+    console.log(`Server Listening on http://localhost:${port}`);
+});
