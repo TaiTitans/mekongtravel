@@ -1,6 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:mekongtravel/screens/sign_in.dart';
+import 'package:http/http.dart' as http;
+import '../core/constants/config.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({Key? key}) : super(key: key);
@@ -8,6 +12,37 @@ class SignUp extends StatelessWidget {
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  bool _isNotValidate = false;
+  void registerUser(BuildContext context) async {
+    if (usernameController.text.isNotEmpty &&
+        emailController.text.isNotEmpty &&
+        passwordController.text.isNotEmpty) {
+      var regBody = {
+        "username": usernameController.text,
+        "email": emailController.text,
+        "password": passwordController.text
+      };
+      var response = await http.post(Uri.parse(registration),
+          headers: {"Content-Type": "application/json"},
+          body: jsonEncode(regBody));
+
+      var jsonResponse = jsonDecode(response.body);
+      print(jsonResponse['status']);
+      if (jsonResponse['status']) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SignIn()),
+        );
+      } else {
+        print("Da Xay Ra Loi");
+      }
+    } else {
+      setState() {
+        _isNotValidate = true;
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,7 +146,11 @@ class SignUp extends StatelessWidget {
                         ),
                         child: TextField(
                           controller: usernameController,
+                          keyboardType: TextInputType.text,
                           decoration: InputDecoration(
+                            errorText:
+                                _isNotValidate ? "Xin hãy nhập lại..." : null,
+                            errorStyle: TextStyle(color: Colors.red),
                             labelText: 'Tên người dùng',
                             prefixIcon: Container(
                               margin: EdgeInsets.only(right: 10),
@@ -142,6 +181,9 @@ class SignUp extends StatelessWidget {
                         child: TextField(
                           controller: emailController,
                           decoration: InputDecoration(
+                            errorText:
+                                _isNotValidate ? "Xin hãy nhập lại..." : null,
+                            errorStyle: TextStyle(color: Colors.red),
                             labelText: 'Email',
                             prefixIcon: Container(
                               margin: EdgeInsets.only(right: 10),
@@ -216,7 +258,7 @@ class SignUp extends StatelessWidget {
                             minimumSize: MaterialStateProperty.all(Size(200,
                                 50)), // Điều chỉnh kích thước của nút ở đây
                           ),
-                          onPressed: () {},
+                          onPressed: () => {registerUser(context)},
                           child: Text('Đăng ký'),
                         ),
                       ),
