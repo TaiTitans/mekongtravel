@@ -1,13 +1,58 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:mekongtravel/screens/sign_up.dart';
+import 'package:http/http.dart' as http;
+import 'package:mekongtravel/screens/welcome_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../core/constants/config.dart';
+class SignIn extends StatefulWidget {
+  const SignIn({super.key, String? token});
 
-class SignIn extends StatelessWidget {
-  SignIn({Key? key}) : super(key: key);
+  @override
+  _SignInPageState createState() => _SignInPageState();
+}
 
-  final TextEditingController usernameController = TextEditingController();
+class _SignInPageState extends State<SignIn> {
+  bool _isNotValidate = false;
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  late SharedPreferences prefs;
+  @override
+  void initState() {
+    super.initState();
+    initSharedPref();
+  }
+
+  void initSharedPref() async {
+    prefs = await SharedPreferences.getInstance();
+  }
+
+  void loginUser() async {
+    if (emailController.text.isNotEmpty && passwordController.text.isNotEmpty) {
+      var regBody = {
+        "email": emailController.text,
+        "password": passwordController.text
+      };
+      var response = await http.post(Uri.parse(login),
+          headers: {"Content-Type": "application/json"},
+          body: jsonEncode(regBody));
+
+      var jsonResponse = jsonDecode(response.body);
+      if (jsonResponse['status']) {
+        var myToken = jsonResponse['token'];
+        prefs.setString('token', myToken);
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => WelcomeScreen(token: myToken)),
+        );
+      } else {
+        print('SOmething went wrong');
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,7 +138,10 @@ class SignIn extends StatelessWidget {
                       ),
                       child: TextField(
                         controller: emailController,
+                        keyboardType: TextInputType.text,
                         decoration: InputDecoration(
+                          errorText:
+                              _isNotValidate ? "Nhap lai thong tin" : null,
                           labelText: 'Email',
                           prefixIcon: Container(
                             margin: EdgeInsets.only(right: 10),
@@ -167,7 +215,9 @@ class SignIn extends StatelessWidget {
                           minimumSize: MaterialStateProperty.all(Size(
                               200, 50)), // Điều chỉnh kích thước của nút ở đây
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          loginUser();
+                        },
                         child: Text('Đăng nhập'),
                       ),
                     ),

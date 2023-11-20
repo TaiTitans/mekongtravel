@@ -1,0 +1,988 @@
+[{
+  "tenTinhThanh": "Cần Thơ",
+  "maTinh": "CT",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Bánh tét lá cẩm",
+          "moTa": "Bánh tét lá cẩm là một món ăn đặc sản của Cần Thơ.",
+          "soTien": 100000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699892512/mekongtravel/tinhthanh/cantho/amthuc/aq3mdylzwgoulvyrndqb.jpg"
+        },
+        {
+          "tenMonAn": "Lẩu mắm",
+          "moTa": "Lẩu mắm là một món ăn đặc sản của miền Tây Nam Bộ.",
+          "soTien": 150000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699892511/mekongtravel/tinhthanh/cantho/amthuc/zcutmux0rvkfv0fwclpu.jpg"
+        },
+        {
+          "tenMonAn": "Bún mắm",
+          "moTa": "Bún mắm là một món ăn đặc sản của miền Tây Nam Bộ.",
+          "soTien": 35000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699892511/mekongtravel/tinhthanh/cantho/amthuc/uv8e3hga8hlp455lqghb.jpg"
+        },
+        {
+          "tenMonAn": "Bánh xèo",
+          "moTa": "Bánh xèo là một món ăn đặc sản của miền Tây Nam Bộ.",
+          "soTien": 50000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699892511/mekongtravel/tinhthanh/cantho/amthuc/unu8pyjysbciy2hmf1wy.jpg"
+        },
+        {
+          "tenMonAn": "Nem nướng",
+          "moTa": "Nem nướng là một món ăn đặc sản của miền Tây Nam Bộ.",
+          "soTien": 50000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699892511/mekongtravel/tinhthanh/cantho/amthuc/mcn5co1hzx0byw1n1zro.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Chợ nổi Cái Răng",
+          "moTa": "Chợ nổi Cái Răng là một trong những điểm du lịch nổi tiếng nhất của Cần Thơ.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699891474/mekongtravel/tinhthanh/cantho/diadiem/dokkromzs8jjcag3lfyp.jpg"
+        },
+        {
+          "tenDiaDiem": "Bến Ninh Kiều",
+          "moTa": "Bến Ninh Kiều là một địa danh lịch sử và văn hóa nổi tiếng của Cần Thơ.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699891885/mekongtravel/tinhthanh/cantho/diadiem/rcbp5y87lq0bwsjnlwqt.jpg"
+        },
+        {
+          "tenDiaDiem": "Vườn cò Bằng Lăng",
+          "moTa": "Vườn cò Bằng Lăng là một khu bảo tồn thiên nhiên nằm ở ngoại ô Cần Thơ.",
+          "soSao": 3,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699891885/mekongtravel/tinhthanh/cantho/diadiem/i1sjg9szxspmqxbcm4s5.jpg"
+        },
+        {
+          "tenDiaDiem": "Thiền viện Trúc Lâm Phương Nam",
+          "moTa": "Thiền viện Trúc Lâm Phương Nam là một thiền viện nổi tiếng ở Cần Thơ.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699891885/mekongtravel/tinhthanh/cantho/diadiem/e9qzzouzuzm2voux0gnx.jpg"
+        },
+        {
+          "tenDiaDiem": "Làng du lịch sinh thái Ông Đề",
+          "moTa": "Làng Du Lịch Sinh Thái Ông Đề với không gian đậm chất miệt vườn Miền Tây là điểm đến không nên bỏ qua nếu bạn có dịp du lịch Cần Thơ. Đến thăm làng du lịch sinh thái Ông Đề, du khách không những được đắm chìm vào bầu không khí trong lành giữa thiên nhiên mà còn được thưởng thức những món ăn thôn quê dân dã của miền Tây Nam Bộ.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699891885/mekongtravel/tinhthanh/cantho/diadiem/j0h5kopc5ttzfhay3l2d.jpg"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Hậu Giang",
+  "maTinh": "HG",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Bánh bèo Hậu Giang",
+          "moTa": "Bánh bèo Hậu Giang là món ăn đặc sản nổi tiếng. Bánh bèo nhỏ xinh được làm từ bột gạo và ăn kèm với nước mắm, tạo hương vị độc đáo.",
+          "soTien": 15000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699892966/mekongtravel/tinhthanh/haugiang/amthuc/gpdwirwawtxpry0qykao.jpg"
+        },
+        {
+          "tenMonAn": "Cá nướng giấy bạc",
+          "moTa": "Cá nướng giấy bạc là món ăn ngon và độc đáo của Hậu Giang. Cá tươi ngon được nướng trong lá giấy bạc, tạo hương vị thơm ngon.",
+          "soTien": 120000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699892967/mekongtravel/tinhthanh/haugiang/amthuc/zg9f7c7dt72whxzvunui.jpg"
+        },
+        {
+          "tenMonAn": "Bánh canh cá",
+          "moTa": "Bánh canh cá là món ăn đặc sản của miền Tây Nam Bộ. Bánh canh được làm từ bột gạo, cá , và nước dùng đậm đà.",
+          "soTien": 35000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699892967/mekongtravel/tinhthanh/haugiang/amthuc/ghqkrkslwxbtd7juxv0a.jpg"
+        },
+        {
+          "tenMonAn": "Bún nước lèo Hậu Giang",
+          "moTa": "Bún nước lèo Hậu Giang là món ăn ngon và độc đáo. Bún nước lèo được nấu từ bún và nước dùng đậm đà, ăn kèm với thịt, hải sản và rau sống.",
+          "soTien": 30000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699892966/mekongtravel/tinhthanh/haugiang/amthuc/h23wuf6uqy01jbdnjlv7.jpg"
+        },
+        {
+          "tenMonAn": "Chè bưởi Hậu Giang",
+          "moTa": "Chè bưởi Hậu Giang là món tráng miệng ngon và độc đáo. Chè này được làm từ bưởi, bột năng, và nước cốt dừa thơm ngon.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699892966/mekongtravel/tinhthanh/haugiang/amthuc/pe7zq5mdq9sn8gva93bh.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Cồn Sơn Hậu Giang",
+          "moTa": "Cồn Sơn Hậu Giang là một quần đảo thuộc huyện Vị Thanh. Nơi đây có cánh đồng lúa mênh mông và là nơi du khách thư giãn trong không gian thiên nhiên yên bình.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699893199/mekongtravel/tinhthanh/haugiang/diadiem/e8znzmycvsg20pjjnqrf.jpg"
+        },
+        {
+          "tenDiaDiem": "Cái Cui Hậu Giang",
+          "moTa": "Cái Cui Hậu Giang là một ngôi làng nằm bên bờ sông Hậu Giang. Làng này nổi tiếng với nghề làm thủ công mỹ nghệ và sản xuất mứt trái cây.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699893199/mekongtravel/tinhthanh/haugiang/diadiem/e6uy9yc6agb2dd83cdlq.jpg"
+        },
+        {
+          "tenDiaDiem": "Vườn trái cây Hậu Giang",
+          "moTa": "Vườn trái cây Hậu Giang là nơi trồng trái cây ngon và đa dạng. Du khách có thể tham quan và thưởng thức trái cây tại vườn này.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699893199/mekongtravel/tinhthanh/haugiang/diadiem/pmja3pf9i1xvyxuokrky.jpg"
+        },
+        {
+          "tenDiaDiem": "Chợ nổi Ngã Bảy",
+          "moTa": "Chợ nổi Ngã Bảy nằm ở huyện Ngã Bảy. Đây là nơi trao đổi, mua bán hàng hóa trên sông Hậu Giang với sự sôi động và màu sắc độc đáo.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699893198/mekongtravel/tinhthanh/haugiang/diadiem/ufswowvfhjrvzpcxp3np.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Lung Ngọc Hoàng",
+          "moTa": "Khu du lịch sinh thái Lung Ngọc Hoàng được biết đến với những cánh rừng tràm bạt ngàn, hệ sinh thái đa dạng và phong phú. Đây là một địa điểm lý tưởng để tham quan, khám phá thiên nhiên và trải nghiệm các hoạt động vui chơi giải trí.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699893199/mekongtravel/tinhthanh/haugiang/diadiem/jg477zqmwnvavavfgjm9.jpg"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Trà Vinh",
+  "maTinh": "TV",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Chù ụ rang me",
+          "moTa": "Chù ụ rang me là món đặc sản tiếp theo của đất Trà Vinh mà chúng mình muốn giới thiệu đến các bạn. Nói về chù ụ thì đây là loài thuộc họ nhà cua, thân vuông nhỏ cùng đôi mắt có phần hơi sụp - rất đúng với tên gọi của nó. Món chù ụ rang me có vị ngọt từ thịt chù ụ hòa cùng vị chua nhẹ của me, bảo đảm bạn có thể bị nghiện đấy.",
+          "soTien": 120000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699894293/mekongtravel/tinhthanh/travinh/amthuc/rzk8t2edotuaav8m0cqd.jpg"
+        },
+        {
+          "tenMonAn": "Mắm bò hóc",
+          "moTa": "Mắm bò hóc, nghe tên thôi cũng khiến nhiều du khách cảm thấy sờ sợ rồi, thế nhưng khi nếm thử thì hẳn ai cũng sẽ gật gù khen ngon. Mắm bò hóc mang hương vị riêng, đậm đà và độc đáo. Đặc biệt, mắm bò hóc có thể ăn kèm với nhiều loại rau, thậm chí là xoài xanh, cóc hay dưa leo,... nữa đấy.",
+          "soTien": 150000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699893637/mekongtravel/tinhthanh/travinh/amthuc/r4zkaoatybestwmdb68y.jpg"
+        },
+        {
+          "tenMonAn": "Bún suông",
+          "moTa": "Món đặc sản tiếp theo mà chúng mình giới thiệu đến các bạn trong hôm nay là bún suông, hay còn được gọi là bún đuông. Bún suông sẽ mang đến bạn vị ngọt thanh, hơi chua và thoang thoảng hương tương hòa cùng chút vị cay từ ớt vô cùng hấp dẫn. Nếu có dịp đến Trà Vinh bạn không nên bỏ lỡ món ăn này nhé.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699893637/mekongtravel/tinhthanh/travinh/amthuc/jgxzqxaemvl8eezyicyz.png"
+        },
+        {
+          "tenMonAn": "Bánh canh Bến Có",
+          "moTa": "Bánh canh Bến Có là món đặc sản thứ năm của Trà Vinh mà chúng mình muốn giới thiệu đến bạn. Món ăn mang vị ngọt thanh từ nước xương được ninh nhiều giờ quyện cùng vị thơm từ rau ngò và chút cay từ tiêu xay. Đã đến Trà Vinh thì bạn nhớ thưởng thức món ăn tuyệt vời này nha.",
+          "soTien": 30000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699893636/mekongtravel/tinhthanh/travinh/amthuc/iy7mta4ft6iivip75xln.jpg"
+        },
+        {
+          "tenMonAn": "Cháo ám",
+          "moTa": "Cháo ám là đặc sản được xem là một trong những đặc sản lâu đời của Trà Vinh. Cháo ám mang đến bạn vị ngọt thanh của nước dùng quyện cùng vị béo thơm của cá cũng như vị đậm đà từ mắm tôm. Đây hẳn sẽ là món ăn khó cưỡng và khó quên với những ai đã có dịp thử qua.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699893636/mekongtravel/tinhthanh/travinh/amthuc/yyqef2o9mjtod8rn9si0.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Chùa Hang",
+          "moTa": "Khác với những công trình kiến trúc được tôn tạo tỉ mỉ, ngôi chùa này lại có sự hòa hợp hoàn hảo với thiên nhiên. Khuôn viên trong chùa chiếm một nửa là rừng cây, cũng là nơi cư trú của nhiều loài chim độc đáo",
+          "soSao": 3,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699894483/mekongtravel/tinhthanh/travinh/diadiem/zzmz5kainvlx5mltduif.webp"
+        },
+        {
+          "tenDiaDiem": "Ao Bà Om",
+          "moTa": "Ao Bà Om là quần thể ao hồ – cây cối xanh mát tạo khí hậu mát mẻ quanh năm. Còn có tên gọi khách là ao Vuông, đây là một hồ nước trong xanh, yên ả dài khoảng 500m; rộng khoảng 300m. Xung quanh ao là các gò cát mấp mô với hàng trăm cây cổ thụ hơn trăm năm tuổi, đa số là cây sao, cây dầu.., có bộ rễ lớn trồi lên mặt đất, tạo thành nhiều hình thù thú vị.",
+          "soSao": 3,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699894497/mekongtravel/tinhthanh/travinh/diadiem/dp5gmgtzpa1qzjcpblnc.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái rừng đước",
+          "moTa": "Có lịch sử hình thành hơn 20 tuổi, Khu du lịch sinh thái rừng đước từ lâu đã trở thành địa điểm du lịch Trà Vinh hấp dẫn với những ai yêu thích khám phá thiên nhiên. Với đặc sản là rừng đước có diện tích lớn bạt ngàn, dấu ấn đầu tiên mà nơi đây mang lại là không gian hoang sơ kì vĩ đến choáng ngợp.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699894481/mekongtravel/tinhthanh/travinh/diadiem/c2bwzflr9hsdxvmw5pzh.jpg"
+        },
+        {
+          "tenDiaDiem": "Cù lao Tân Quy",
+          "moTa": "Cách trung tâm thành phố Trà Vinh khoảng 45km về phía Tây Bắc, cù lao Tân Quy là một trong những cù lao trù phú với diện tích khoảng 929 hecta. Nằm trên dòng sông Hậu hiền hòa với phù sa trù phú, những miệt vườn trái sai trĩu quả là niềm tự hào ngàn đời của người dân nơi đây.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699894480/mekongtravel/tinhthanh/travinh/diadiem/lzwakzob0rqmlatvxkpu.jpg"
+        },
+        {
+          "tenDiaDiem": "Biển Ba Động",
+          "moTa": "Biển Ba Động luôn được coi là một trong những địa điểm du lịch Trà Vinh nổi tiếng nhất. Đắm mình vào không gian mênh mông của biển xanh, hít căng lồng ngực thứ gió biển đặc trưng hiếm có, khách du lịch sẽ hiểu được vì sao biển Ba Động lại có sức hút lớn như vậy.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699894478/mekongtravel/tinhthanh/travinh/diadiem/pv1sel4inlkzogwaqyky.jpg"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Cà Mau",
+  "maTinh": "CM",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Chả trứng mực Đất Mũi",
+          "moTa": "Thêm một món ăn đặc sản nổi tiếng ở vùng đất Cà Mau nữa đó chính là: Chả trứng mực Đất Mũi. Món chả trứng này khi chiên lên sẽ có màu vàng đẹp mắt, dậy mùi thơm, khi ăn bạn thái lát mỏng cuốn với rau sống và bánh tráng là đúng điệu.",
+          "soTien": 450000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699895629/mekongtravel/tinhthanh/camau/amthuc/jmwqjj2ojwp8aoteoc8i.jpg"
+        },
+        {
+          "tenMonAn": "Cua đá rang muối Cà Mau",
+          "moTa": "Nếu đã đặt chân đến đất Cà Mau mà không mua về cho mình ít cua đá rang muối thì quả là một sự thiếu sót không hề nhỏ của bạn. Món cua đá rang muối với những con cua chín màu đỏ hấp dẫn, thịt cua dai ngọt khi ăn chấm với muối tiêu sẽ khiến bạn nhớ mãi hương vị này không quên!",
+          "soTien": 350000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699895631/mekongtravel/tinhthanh/camau/amthuc/bdvygmev2tdkjgjozghz.jpg"
+        },
+        {
+          "tenMonAn": "Ốc móng tay chúa nướng mỡ hành",
+          "moTa": "Ốc móng tay có độ dai giòn, thịt ốc ngọt và quyện cùng độ béo của mỡ hành. Món ăn có thể chấm cùng các loại muối ớt xanh cho đậm vị.",
+          "soTien": 520000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699895629/mekongtravel/tinhthanh/camau/amthuc/h0k4jhx5lzrwquvbbhm7.jpg"
+        },
+        {
+          "tenMonAn": "Rùa rang muối Cà Mau",
+          "moTa": "Rùa rang muối với vị thơm giòn, béo ngậy của thịt rùa, khi ăn chấm với muối ớt hoặc muối tiêu và ăn cùng rau răm là chuẩn vị nhất.",
+          "soTien": 500000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699895629/mekongtravel/tinhthanh/camau/amthuc/pdrg8lqclv4jln2t9ggh.jpg"
+        },
+        {
+          "tenMonAn": "Lẩu mắm U Minh",
+          "moTa": "Nếu đi Cà Mau về thì bạn đừng quên mua lẩu mắm U Minh về để chiêu đãi mọi người nhé! Món lẩu này nổi tiếng trong các nhà hàng sang trọng, với cá đồng nấu chung cùng mắm đã được chọn lọc kỹ lưỡng đặc biệt người ta dùng sữa thay đường để tăng hương vị cho món lẩu này.",
+          "soTien": 150000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699895629/mekongtravel/tinhthanh/camau/amthuc/mi0pdnpgxda00tp3ln85.webp"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Hòn Đá Bạc",
+          "moTa": "Hòn Đá Bạc là một hòn đảo cách thành phố Cà Mau 50 km theo đường thủy. hiện nay Hòn Đá Bạc thu hút nhiều khách du lịch lui tới bởi vẻ đẹp hoang sơ và kỳ thú. Cây cầu nối các hòn đảo để việc di chuyển được dễ dàng, bước trên cây cầu, bạn đã như lạc vào chốn bồng lai tiên cảnh.",
+          "soSao": 5,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699895822/mekongtravel/tinhthanh/camau/diadiem/mwshitxqkccf7fyzbzhu.jpg"
+        },
+        {
+          "tenDiaDiem": "Đầm Thị Tường",
+          "moTa": "Đầm Thị Tường là nơi sinh sống của các loại thủy sản nước lợ như tôm sú, cua và nhiều loại sinh vật đa dạng khác. Cư dân sinh sống quanh đầm chủ yếu bằng nguồn lợi thủy hải sản khai thác được từ đầm này. Du khách đến đây sẽ được hòa mình vào một cuộc sống bình dị của thiên nhiên và con người nơi đây.",
+          "soSao": 3,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699895822/mekongtravel/tinhthanh/camau/diadiem/veux2fmpcolutldxgilf.jpg"
+        },
+        {
+          "tenDiaDiem": "Rừng ngập mặn Cà Mau",
+          "moTa": "Cách thành phố Cà Mau khoảng 60 km và sau hơn giờ đi bằng tàu cao tốc du khách sẽ được khám phá rừng ngập mặn Cà Mau – khu rừng ngập mặn lớn thứ 2 trên thế giới, sau rừng Amazon ở Nam Mỹ.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699895823/mekongtravel/tinhthanh/camau/diadiem/ecmmgh7jmkypglzzrfsi.jpg"
+        },
+        {
+          "tenDiaDiem": "Mũi Cà Mau",
+          "moTa": "Khung cảnh nên thơ của rừng cây và sông nước sẽ mang lại cho bạn cảm giác bình yên. Hệ sinh thái rừng ngập mặn ở đây rất đa dạng và phong phú. Đặc biệt, bạn đừng quên check-in tại cột mốc đánh dấu điểm cực Nam của Tổ Quốc nhé.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699895822/mekongtravel/tinhthanh/camau/diadiem/wmwlmj1ycfnf7g2reyib.jpg"
+        },
+        {
+          "tenDiaDiem": "Đảo Hòn Khoai Cà Mau",
+          "moTa": "Là một bức tranh thiên nhiên kì vĩ với cánh rừng xanh quanh năm, bãi biển xanh trong và bờ cát trắng mịn. Đây là địa điểm không thể bỏ qua khi du lịch Cà Mau.",
+          "soSao": 4,
+          "hinhAnh": "mekongtravel/tinhthanh/camau/diadiem/sh2pzj3ivwxz3zdcvx2w"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Bạc Liêu",
+  "maTinh": "BL",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Bún bò cay",
+          "moTa": "Nếu bạn là một “tín đồ” của những món ăn cay, bún bò cay Bạc Liêu sẽ là một món ăn đáng để trải nghiệm. Những sợi bún trắng mềm, thịt bò chín tái cùng với nước dùng cay cay, đậm đà chắc chắn sẽ khiến bạn càng ăn càng yêu thích.",
+          "soTien": 35000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699896064/mekongtravel/tinhthanh/baclieu/amthuc/xyhoe388iexezpnmn1ue.jpg"
+        },
+        {
+          "tenMonAn": "Bánh củ cải",
+          "moTa": "Bánh củ cải là món ăn quen thuộc của người dân Bạc Liêu. Những chiếc bánh củ cải nhỏ xinh được mọi người yêu thích bởi vị đậm đà, béo ngậy của tôm, thịt cùng hương vị hăng hăng của bột củ cải. Đây là món ăn mà bạn nhất định phải thử khi đến Bạc Liêu đấy nhé.",
+          "soTien": 20000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699896056/mekongtravel/tinhthanh/baclieu/amthuc/u6iqadrfpagutc8finhi.jpg"
+        },
+        {
+          "tenMonAn": "Đuông chà là",
+          "moTa": "Đuông chà là cũng là món ăn vặt thơm ngon, hấp dẫn mà bạn không thể bỏ qua. Khi ăn, bạn sẽ cảm nhận được vị béo ngậy vô cùng đặc trưng. Đuông chà là thường được chế biến thành nhiều món ăn khác nhau như đuông nướng, đuông tắm mắm, đuông chiên giòn,...",
+          "soTien": 50000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699896056/mekongtravel/tinhthanh/baclieu/amthuc/oeitlxcicpd9nobhkzxd.jpg"
+        },
+        {
+          "tenMonAn": "Cá kèo nấu giấm",
+          "moTa": "Cá kèo nấu giấm là món ăn dân dã, đậm đà hương vị miền Tây. Món ăn được chế biến bằng nguyên liệu chính là cá kèo, giấm, sau đó được nêm nếm các gia vị cho vừa ăn. Cá kèo nấu giấm ăn kèm với cơm, bún hoặc rau sống cũng đều thơm ngon, hợp vị.",
+          "soTien": 130000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699896056/mekongtravel/tinhthanh/baclieu/amthuc/kq1nuy9khp7bwqszcwug.jpg"
+        },
+        {
+          "tenMonAn": "Bún xào nem nướng",
+          "moTa": "Bún xào nem nướng là một trong những món ăn nổi tiếng tại Bạc Liêu. Nguyên liệu làm nên món ăn hấp dẫn này là bún, thịt heo cắt mỏng, tỏi, sả băm nhuyễn cùng nem nướng đã được tẩm ướp vừa ăn. Khi ăn, bạn có thể rắc thêm một ít đậu phộng và ăn kèm với nước mắm cay nhé.",
+          "soTien": 35000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699896057/mekongtravel/tinhthanh/baclieu/amthuc/xu06r0xxlwdvaez5kbe3.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Cánh đồng quạt gió Bạc Liêu",
+          "moTa": "Đây chính là địa điểm chụp ảnh yêu thích của giới trẻ khi đến với Bạc Liêu. Thời gian thích hợp nhất để chụp ảnh ở đây là khoảng lúc 3, 4 giờ chiều bởi lúc này trời nắng không quá gắt khiến bạn khó chịu nhưng vẫn đủ sáng sủa và mát mẻ để cho ra đời những tấm hình sống ảo xinh đẹp nhất. Tuy nhiên, nếu muốn vào đây tham quan chụp ảnh thì các bạn phải xin phép bảo vệ và những người canh gác",
+          "soSao": 5,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699896865/mekongtravel/tinhthanh/baclieu/diadiem/lcw5xa7s52jndi7odnsr.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch Nhà Mát",
+          "moTa": "Khu du lịch nhà mát Bạc Liêu đã trở thành địa điểm quen thuộc của du khách trong những năm gần đây. Nhà Mát còn được du khách gọi là “Suối Tiên của miền Tây” bởi du khách sẽ có những giây phút thư giãn thoải mái khi hòa mình cùng sóng biếc như đang trên biển thật. Điều gây ấn tượng đầu tiên với du khách chính là hình dạng cổng vào khu bãi tắm được thiết kế với hình ảnh con bạch tuộc nâng chiếc thuyền lên cao khá đẹp mắt.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699896866/mekongtravel/tinhthanh/baclieu/diadiem/kmxxrwc8rhxmtdcqnrub.jpg"
+        },
+        {
+          "tenDiaDiem": "Nhà công tử Bạc Liêu",
+          "moTa": "Nhà công tử Bạc Liêu tọa lạc tại số 13 Điện Biên Phủ, phường 3, thành phố Bạc Liêu, được xây dựng vào khoảng năm 1919. Ngôi nhà do kỹ sư người Pháp thiết kế và tất cả vật liệu để xây dựng đều được đưa từ Pháp qua, được xem là ngôi nhà bề thế nhất ở Nam Kỳ lục tỉnh lúc bấy giờ.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699896866/mekongtravel/tinhthanh/baclieu/diadiem/pu1emfxitji6qkawnoih.jpg"
+        },
+        {
+          "tenDiaDiem": "Chùa Xiêm Cán",
+          "moTa": "Là một quần thể kiến trúc gồm chính điện, sala, nhà ở của các sư sãi, tháp đựng hài cốt, am… Du khách sẽ ngỡ ngàng trước một khuôn viên chùa bao la rộng lớn, một không gian yên tĩnh, bầu trời trong xanh, nắng vàng soi qua kẽ lá, tiếng chim hót văng vẳng từ xa, không khí trong lành… khiến tâm hồn du khách cảm thấy thư thái lạ thường.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699896865/mekongtravel/tinhthanh/baclieu/diadiem/kfx3clw4tnmtwtqdvvm6.jpg"
+        },
+        {
+          "tenDiaDiem": "Nhà thờ Tắc Sậy",
+          "moTa": "Đến với nhà thờ Tắc Sậy, ngoài việc viếng thăm mộ phần của cha Bửu Diệp thì du khách có thể chiêm ngưỡng kiến trúc độc đáo của nhà thờ, đây được xem là một trong những nhà thờ đẹp nhất trong các tỉnh miền Tây. Hàng ngày có rất đông tín đồ hành hương và du khách ghé thăm nhà thờ Tắc Sậy để viếng cha Bửu Diệp và đây cũng là điểm tham quan hấp dẫn trong các tour du lịch miền Tây",
+          "soSao": 3,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699896864/mekongtravel/tinhthanh/baclieu/diadiem/in8perqwurd4jdczlryn.jpg"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Long An",
+  "maTinh": "LA",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Bánh phồng tôm",
+          "moTa": "Đây là một món ăn đặc sản của tỉnh Long An. Bánh phồng tôm được làm từ bột gạo, tôm, và được chiên giòn.",
+          "soTien": 50000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699897680/mekongtravel/tinhthanh/longan/amthuc/vhtqnkd2ixau78yvgcav.jpg"
+        },
+        {
+          "tenMonAn": "Bánh tét Lá Bồ Đề",
+          "moTa": "Đây là một món ăn đặc sản của huyện Đức Hòa. Bánh tét được làm từ nếp, đậu xanh, thịt heo, và được gói bằng lá bồ đề.",
+          "soTien": 100000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699897679/mekongtravel/tinhthanh/longan/amthuc/tlvfapnl6v5hi7uwbhxd.webp"
+        },
+        {
+          "tenMonAn": "Bánh canh cá lóc",
+          "moTa": "Đây là một món ăn đặc sản của miền Tây Nam Bộ. Bánh canh cá lóc được làm từ bột gạo, cá lóc, và nước dùng đậm đà.",
+          "soTien": 50000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699897679/mekongtravel/tinhthanh/longan/amthuc/whjmzeqvkldxd3otk9yy.jpg"
+        },
+        {
+          "tenMonAn": "Bún xiêm lo",
+          "moTa": "Món bún xiêm lo có hương vị đặc trưng, thơm ngon, đậm đà. Nước dùng có vị ngọt thanh của thịt, cá, tôm khô, hòa quyện với vị chua chua của mắm xiêm, vị cay của ớt, tạo nên một món ăn vô cùng hấp dẫn.",
+          "soTien": 50000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699897678/mekongtravel/tinhthanh/longan/amthuc/hwvpzvlv2macnibt76df.jpg"
+        },
+        {
+          "tenMonAn": "Chè bưởi",
+          "moTa": "Đây là một món ăn đặc sản của miền Tây Nam Bộ. Chè bưởi được làm từ bưởi, bột năng, và nước cốt dừa.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699897679/mekongtravel/tinhthanh/longan/amthuc/qae6w487z9ghwyy10kwu.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": " Làng cổ Phước Lộc Thọ",
+          "moTa": "Làng cổ này được xây dựng từ thế kỷ 17, với những ngôi nhà cổ mang đậm kiến trúc truyền thống của Việt Nam. Làng cổ Phước Lộc Thọ cũng là nơi sản xuất các sản phẩm thủ công mỹ nghệ nổi tiếng, như gốm sứ, mây tre đan,...",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699897574/mekongtravel/tinhthanh/longan/diadiem/d1aqxtekvuqjsgw6rxcl.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Vàm Sát",
+          "moTa": "Đây là một khu du lịch sinh thái nằm ở huyện Cần Đước. Nơi đây có nhiều vườn cây trái, ao cá, và các hoạt động vui chơi giải trí hấp dẫn.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699897573/mekongtravel/tinhthanh/longan/diadiem/pukd8duhu8rxodzpz8um.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Cát Tường Phú Sinh",
+          "moTa": "Đây là một khu du lịch sinh thái nằm ở huyện Bến Lức. Nơi đây có nhiều vườn cây trái, ao cá, và các hoạt động vui chơi giải trí hấp dẫn.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699897573/mekongtravel/tinhthanh/longan/diadiem/emc1xi657urtdkzk3d93.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Xuyên Á",
+          "moTa": "Đây là một khu du lịch sinh thái nằm ở huyện Tân Trụ. Nơi đây có nhiều vườn cây trái, ao cá, và các hoạt động vui chơi giải trí hấp dẫn.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699897573/mekongtravel/tinhthanh/longan/diadiem/ikxecoqbtinnashmuelf.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Long An",
+          "moTa": "Đây là một khu du lịch sinh thái nằm ở huyện Mộc Hóa. Nơi đây có nhiều vườn cây trái, ao cá, và các hoạt động vui chơi giải trí hấp dẫn.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699897572/mekongtravel/tinhthanh/longan/diadiem/vn0donust1y8kk8sg6og.jpg"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Bến Tre",
+  "maTinh": "BT",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Bánh xèo Bến Tre",
+          "moTa": "Bánh xèo Bến Tre là món ăn đặc sản của tỉnh. Bánh xèo được làm từ bột gạo, tôm, thịt heo, và ăn kèm với nước mắm và rau sống.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699898024/mekongtravel/tinhthanh/bentre/amthuc/ejlt26pintw2kznvjumd.webp"
+        },
+        {
+          "tenMonAn": "Hủ tiếu Nam Vang Bến Tre",
+          "moTa": "Hủ tiếu Nam Vang Bến Tre là món ăn phổ biến tại tỉnh. Hủ tiếu được nấu từ bún, nước dùng thơm ngon, và các loại thịt, hải sản.",
+          "soTien": 35000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699898024/mekongtravel/tinhthanh/bentre/amthuc/ssjv73rmaw1ij0xzelvm.jpg"
+        },
+        {
+          "tenMonAn": "Bánh canh chả cá",
+          "moTa": "Bánh canh chả cá là món ăn đặc sản của miền Tây Nam Bộ. Bánh canh được làm từ bột gạo, chả cá và nước dùng đậm đà.",
+          "soTien": 30000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699898024/mekongtravel/tinhthanh/bentre/amthuc/lxrdyl5c6ygfkshhqqxl.jpg"
+        },
+        {
+          "tenMonAn": "Bánh mì nướng phô mai Bến Tre",
+          "moTa": "Bánh mì nướng phô mai Bến Tre là món tráng miệng phổ biến. Bánh mì nướng có lớp phô mai thơm ngon ở trên, tạo hương vị độc đáo.",
+          "soTien": 20000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699898025/mekongtravel/tinhthanh/bentre/amthuc/uptfye8wthgkhvahfdzv.jpg"
+        },
+        {
+          "tenMonAn": "Chè bưởi Bến Tre",
+          "moTa": "Chè bưởi Bến Tre là món tráng miệng ngon và độc đáo. Chè này được làm từ bưởi, bột năng, và nước cốt dừa thơm ngon.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699898024/mekongtravel/tinhthanh/bentre/amthuc/kbd9mw7xnigjjwafaho3.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Cồn Phụng",
+          "moTa": "Cồn Phụng được biết đến với nhiều di tích lịch sử và văn hóa, nổi bật nhất là di tích Đạo Dừa. Đây là một quần thể kiến trúc độc đáo, được xây dựng bởi giáo chủ Đạo Dừa, ông Nguyễn Thanh Nhựt. Di tích Đạo Dừa bao gồm nhiều công trình kiến trúc kỳ lạ, như sân rồng, chùa, tháp,...",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699898214/mekongtravel/tinhthanh/bentre/diadiem/hgntpeeorfkko8pxxeay.jpg"
+        },
+        {
+          "tenDiaDiem": "Chợ nổi Bến Tre",
+          "moTa": "Chợ nổi Bến Tre là nơi trao đổi, mua bán hàng hóa trên các con kênh và sông. Chợ nổi này có không gian độc đáo và sôi động.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699898214/mekongtravel/tinhthanh/bentre/diadiem/upbi5um2pfyp9wczrbji.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Mỹ Tho",
+          "moTa": "Khu du lịch sinh thái Mỹ Tho nằm ở huyện Chợ Lách. Nơi đây có vườn cây trái, ao cá, và các hoạt động giải trí dưới bóng dừa.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699898213/mekongtravel/tinhthanh/bentre/diadiem/krh10x39qvsnarjl7ic0.jpg"
+        },
+        {
+          "tenDiaDiem": "Cây cầu Tre Cổ Thạch",
+          "moTa": "Cây cầu Tre Cổ Thạch nằm ở huyện Giồng Trôm. Đây là một trong những cây cầu treo độc đáo và cổ kính của Bến Tre.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699898214/mekongtravel/tinhthanh/bentre/diadiem/uoi6kqykhqqjbeasyalq.jpg"
+        },
+        {
+          "tenDiaDiem": "Vườn cây Bưởi Mỏ Cày",
+          "moTa": "Vườn cây Bưởi Mỏ Cày nằm ở huyện Mỏ Cày. Nơi đây có vườn bưởi trải rộng và khung cảnh thiên nhiên tươi đẹp.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699898212/mekongtravel/tinhthanh/bentre/diadiem/ijdd6kczbmrwzblreg2b.jpg"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Vĩnh Long",
+  "maTinh": "VL",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Bánh mì nướng Vĩnh Long",
+          "moTa": "Bánh mì nướng Vĩnh Long là một món ăn đặc sản nổi tiếng. Bánh mì được nướng trên lửa than, sau đó ăn kèm với những loại gia vị độc đáo.",
+          "soTien": 20000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944325/mekongtravel/tinhthanh/vinhlong/amthuc/nk7b1dggjgmxmt8w4sit.jpg"
+        },
+        {
+          "tenMonAn": "Gỏi cá trích sông Cửu Long",
+          "moTa": "Gỏi cá trích sông Cửu Long là món ăn ngon và độc đáo của Vĩnh Long. Cá trích tươi ngon được chế biến thành gỏi với nước mắm và rau sống.",
+          "soTien": 120000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944326/mekongtravel/tinhthanh/vinhlong/amthuc/gcokm6in5gw9eqxb7vno.jpg"
+        },
+        {
+          "tenMonAn": "Bánh tét lá sen",
+          "moTa": "Bánh tét lá sen là món ăn truyền thống của Vĩnh Long. Bánh tét được bọc bên ngoài bằng lá sen và làm từ nếp, đậu xanh, thịt heo.",
+          "soTien": 60000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944325/mekongtravel/tinhthanh/vinhlong/amthuc/kmd5vjczhxajylk81oeb.jpg"
+        },
+        {
+          "tenMonAn": "Cá linh nướng trui",
+          "moTa": "Cá linh nướng trui là món ăn ngon và độc đáo của Vĩnh Long. Cá linh tươi ngon được nướng trui trên lửa than hồng, tạo ra hương vị đặc biệt.",
+          "soTien": 150000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944325/mekongtravel/tinhthanh/vinhlong/amthuc/wjlcrvfwkvos9owegbud.jpg"
+        },
+        {
+          "tenMonAn": "Chè đậu xanh nước cốt dừa",
+          "moTa": "Chè đậu xanh nước cốt dừa là món tráng miệng phổ biến tại Vĩnh Long. Chè này được làm từ đậu xanh và nước cốt dừa thơm ngon.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944325/mekongtravel/tinhthanh/vinhlong/amthuc/lgjxmfllsthiw8n0r1nc.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Trà Ôn",
+          "moTa": "Khu du lịch sinh thái Trà Ôn nằm ở huyện Trà Ôn. Nơi đây có nhiều ao cá, vườn cây trái và môi trường thiên nhiên tươi đẹp.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944537/mekongtravel/tinhthanh/vinhlong/diadiem/gxdhsee7unkg4yi1m9sc.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Tam Bình",
+          "moTa": "Khu du lịch sinh thái Tam Bình nằm ở huyện Tam Bình. Nơi đây có cánh đồng lúa xanh rộn và các hoạt động vui chơi giải trí dân dã.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944538/mekongtravel/tinhthanh/vinhlong/diadiem/xhuahuwxfvnmszm1ysvd.jpg"
+        },
+        {
+          "tenDiaDiem": "Chợ nổi Vĩnh Long",
+          "moTa": "Chợ nổi Vĩnh Long là một nét văn hóa độc đáo của tỉnh. Người dân trên sông tổ chức giao thương, buôn bán trên thuyền trên sông Cửu Long.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944537/mekongtravel/tinhthanh/vinhlong/diadiem/c4osfktr7zalsypx53e8.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Măng Thít",
+          "moTa": "Khu du lịch sinh thái Măng Thít nằm ở huyện Bình Minh. Nơi đây có rừng măng thít nguyên sinh và rừng tràm đẹp mắt.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944539/mekongtravel/tinhthanh/vinhlong/diadiem/jbyvugdeyzmkjq3ftj66.png"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Cái Nhum",
+          "moTa": "Khu du lịch sinh thái Cái Nhum nằm ở huyện Long Hồ. Nơi đây có các ao cá và đồng cỏ xanh mướt, thích hợp cho cắm trại và dã ngoại.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944537/mekongtravel/tinhthanh/vinhlong/diadiem/avensxjypbyntsz7mmvh.jpg"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "An Giang",
+  "maTinh": "AG",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Bún nước lèo Châu Đốc",
+          "moTa": "Bún nước lèo Châu Đốc là món ăn đặc sản của An Giang. Bún nước lèo được nấu từ bún và nước dùng đậm đà, ăn kèm với thịt, hải sản và rau sống.",
+          "soTien": 35000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944756/mekongtravel/tinhthanh/angiang/amthuc/lixkwfnr4s5pisy4v1d2.jpg"
+        },
+        {
+          "tenMonAn": "Lẩu mắm Trà Sư",
+          "moTa": "Lẩu mắm Trà Sư là món ăn ngon và độc đáo của An Giang. Mắm nêm và các loại hải sản, rau sống được nấu trong nồi lẩu, tạo ra hương vị đậm đà.",
+          "soTien": 80000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944755/mekongtravel/tinhthanh/angiang/amthuc/xpmdpw48psk1s35sg53x.jpg"
+        },
+        {
+          "tenMonAn": "Bánh tét Châu Đốc",
+          "moTa": "Bánh tét Châu Đốc là món ăn truyền thống của An Giang. Bánh tét được làm từ nếp, đậu xanh, thịt lợn và được bọc trong lá chuối.",
+          "soTien": 45000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944756/mekongtravel/tinhthanh/angiang/amthuc/xlzcubttv8z0vjc2b88n.jpg"
+        },
+        {
+          "tenMonAn": "Cá bớp hấp bánh tráng",
+          "moTa": "Cá bớp hấp bánh tráng là món ăn ngon và độc đáo của An Giang. Cá bớp tươi ngon được hấp chín và ăn kèm với bánh tráng và nước mắm.",
+          "soTien": 120000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944755/mekongtravel/tinhthanh/angiang/amthuc/l01lscgytgwmdckgxjs4.jpg"
+        },
+        {
+          "tenMonAn": "Xôi bắp nước cốt dừa",
+          "moTa": "Xôi bắp nước cốt dừa là món tráng miệng ngon và độc đáo. Xôi bắp được nấu chín với nước cốt dừa thơm ngon.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699944754/mekongtravel/tinhthanh/angiang/amthuc/ghoybrlv985zs9dhd0cp.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Núi Sam",
+          "moTa": "Núi Sam nằm ở huyện Châu Đốc. Đỉnh núi cao cùng với chùa Bà Chúa Xứ là nơi thờ phượng và có khung cảnh thiên nhiên tuyệt đẹp.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945019/mekongtravel/tinhthanh/angiang/diadiem/cvc4aukepq8aaccozxxf.jpg"
+        },
+        {
+          "tenDiaDiem": "Chợ nổi Long Xuyên",
+          "moTa": "Chợ nổi Long Xuyên nằm ở thành phố Long Xuyên. Chợ nổi này là nơi trao đổi, mua bán các loại hàng hóa trên sông Hậu Giang, với sự sôi động và màu sắc độc đáo.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945018/mekongtravel/tinhthanh/angiang/diadiem/unvroqlqpvztkljeradc.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Trà Sư",
+          "moTa": "Khu du lịch sinh thái Trà Sư nằm ở huyện Tịnh Biên. Nơi đây có rừng tràm xanh ngắt, cánh đồng lúa và quần thể chim đa dạng, thu hút du khách yêu thiên nhiên.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945018/mekongtravel/tinhthanh/angiang/diadiem/lcxq2b28djdlowv3cscw.jpg"
+        },
+        {
+          "tenDiaDiem": "Đền Ông Hòang",
+          "moTa": "Đền Ông Hòang nằm ở huyện Thoại Sơn. Đây là một trong những ngôi đền lớn và quy mô ấn tượng, là nơi tôn vinh thần linh và di tích lịch sử.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945021/mekongtravel/tinhthanh/angiang/diadiem/yczncmnmasz1it8hlxya.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch biển Bình Tiên",
+          "moTa": "Khu du lịch biển Bình Tiên nằm ở huyện Tri Tôn. Bãi biển tại đây còn hoang sơ và chưa bị đắp đất, tạo điều kiện lý tưởng cho du khách thư giãn.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945025/mekongtravel/tinhthanh/angiang/diadiem/nnl7sxml91jxyiyxlbgp.png"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Tiền Giang",
+  "maTinh": "TG",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Bánh bèo",
+          "moTa": "Đây là một món ăn dân dã của người Tiền Giang. Bánh bèo được làm từ bột gạo, nhân tôm thịt, và ăn kèm với nước mắm chua ngọt.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945236/mekongtravel/tinhthanh/tiengiang/amthuc/fv7t4kqwrkngcuvh7efi.jpg"
+        },
+        {
+          "tenMonAn": "Bánh tét Nhị Sĩ",
+          "moTa": "Đây là một món ăn đặc sản của huyện Chợ Gạo. Bánh tét được làm từ nếp, đậu xanh, thịt heo, và được gói bằng lá chuối.",
+          "soTien": 100000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945237/mekongtravel/tinhthanh/tiengiang/amthuc/shoo6fqf40r7wnscnxw1.jpg"
+        },
+        {
+          "tenMonAn": "Bánh canh chả cá",
+          "moTa": " Đây là một món ăn đặc sản của huyện Gò Công. Bánh canh được làm từ bột gạo, chả cá, và ăn kèm với nước dùng đậm đà.",
+          "soTien": 40000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945236/mekongtravel/tinhthanh/tiengiang/amthuc/hfbytamwcmpzh9tbw7vy.jpg"
+        },
+        {
+          "tenMonAn": "Bún riêu cua đồng",
+          "moTa": "Đây là một món ăn đặc sản của miền Tây Nam Bộ. Bún riêu cua đồng được làm từ cua đồng, cà chua, đậu phụ, và ăn kèm với các loại rau sống.",
+          "soTien": 30000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945236/mekongtravel/tinhthanh/tiengiang/amthuc/xrggfm08yqmop5lrsshc.jpg"
+        },
+        {
+          "tenMonAn": "Bánh mứt gấc",
+          "moTa": " Đây là một món ăn đặc sản của huyện Chợ Gạo. Bánh mứt gấc được làm từ gấc, bột nếp, và ăn kèm với đường.",
+          "soTien": 50000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945235/mekongtravel/tinhthanh/tiengiang/amthuc/v9y91gklftqz4hhtbwcv.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Cù lao Thới Sơn",
+          "moTa": " Đây là một trong những điểm du lịch sinh thái nổi tiếng nhất ở Tiền Giang. Nơi đây có nhiều vườn cây trái, ao cá, và các hoạt động vui chơi giải trí hấp dẫn.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945481/mekongtravel/tinhthanh/tiengiang/diadiem/hmkg79g3m6oxxldenc9f.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu di tích lịch sử và danh thắng Rạch Gầm - Xoài Mút",
+          "moTa": "Đây là một khu di tích lịch sử, nơi diễn ra trận Rạch Gầm - Xoài Mút năm 1785. Nơi đây có nhiều di tích lịch sử, văn hóa, và các hoạt động du lịch tham quan.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945481/mekongtravel/tinhthanh/tiengiang/diadiem/dyqssrnv7ega1bfodi4s.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Mỹ Tho - Cái Bè",
+          "moTa": "Đây là một khu du lịch sinh thái nằm ở trung tâm tỉnh Tiền Giang. Nơi đây có nhiều vườn cây trái, ao cá, và các hoạt động vui chơi giải trí hấp dẫn.",
+          "soSao": 4,
+          "hinhAnh": "mekongtravel/tinhthanh/tiengiang/diadiem/ycsomd0mvq0h4zgzxopu"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Cồn Phụng",
+          "moTa": "Đây là một khu du lịch sinh thái nằm ở huyện Cai Lậy. Nơi đây có nhiều vườn cây trái, ao cá, và các hoạt động vui chơi giải trí hấp dẫn.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945480/mekongtravel/tinhthanh/tiengiang/diadiem/zgxd2mns3dazyvucwq62.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Lan Vương",
+          "moTa": "Đây là một khu du lịch sinh thái nằm ở huyện Châu Thành. Nơi đây có nhiều vườn cây trái, ao cá, và các hoạt động vui chơi giải trí hấp dẫn.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699945480/mekongtravel/tinhthanh/tiengiang/diadiem/lptjqyds3gxi0qpjj2hh.jpg"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Đồng Tháp",
+  "maTinh": "DT",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Lẩu bông điên điển",
+          "moTa": "Lẩu bông điên điển là món ăn đặc sản của Đồng Tháp. Món ăn này được làm từ bông điên điển, một loại hoa nở vào mùa đông, ăn kèm với nước mắm và các loại gia vị đặc biệt.",
+          "soTien": 80000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699946485/mekongtravel/tinhthanh/dongthap/amthuc/qavzlxeca4ohqb9fpduc.jpg"
+        },
+        {
+          "tenMonAn": "Bánh cống Đồng Tháp",
+          "moTa": "Bánh cống Đồng Tháp là món ăn truyền thống ngon và độc đáo. Bánh cống được làm từ bột gạo, nhân bánh từ thịt heo và tôm, sau đó chiên vàng giòn.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699946484/mekongtravel/tinhthanh/dongthap/amthuc/bp7hg5t489rgo5ueoxjm.jpg"
+        },
+        {
+          "tenMonAn": "Cá lóc kho tộ",
+          "moTa": "Cá lóc kho tộ là món ăn phổ biến tại Đồng Tháp. Cá lóc được kho với nước mắm, đường, gia vị và thảo quả, tạo ra một hương vị đậm đà.",
+          "soTien": 120000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699946484/mekongtravel/tinhthanh/dongthap/amthuc/k4xqpcpj4cmwfyxeqi12.jpg"
+        },
+        {
+          "tenMonAn": "Bún nước lèo Đồng Tháp",
+          "moTa": "Bún nước lèo Đồng Tháp là món ăn ngon và độc đáo. Bún nước lèo được nấu từ bún và nước dùng đậm đà, ăn kèm với thịt, hải sản và rau sống.",
+          "soTien": 60000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699946483/mekongtravel/tinhthanh/dongthap/amthuc/djmrkafs9raaq0q3u48n.jpg"
+        },
+        {
+          "tenMonAn": "Bánh tam biển Sa Đéc",
+          "moTa": "Bánh tam biển Sa Đéc là món ăn ngon và độc đáo. Bánh tam được làm từ bột gạo, nhân bánh từ các loại hải sản và gia vị đặc biệt.",
+          "soTien": 35000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699946484/mekongtravel/tinhthanh/dongthap/amthuc/dcs0y632npkcbrp0gryw.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Tràm Chim",
+          "moTa": "Khu du lịch sinh thái Tràm Chim nằm ở huyện Tam Nông. Nơi đây có Di sản thiên nhiên thế giới với nhiều loài chim quý hiếm, ao tràm rộng lớn và cánh đồng lúa xanh ngát.",
+          "soSao": 5,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699968605/mekongtravel/tinhthanh/dongthap/diadiem/vtahy61bimfs17afkrte.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Sa Đéc",
+          "moTa": "Khu du lịch sinh thái Sa Đéc nằm ở huyện Sa Đéc. Nơi đây có các khu vườn hoa nổi tiếng và cuộc sống thôn quê truyền thống.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699968606/mekongtravel/tinhthanh/dongthap/diadiem/utln99szqr74xzukaolu.jpg"
+        },
+        {
+          "tenDiaDiem": "Làng hoa Sa Đéc",
+          "moTa": "Làng hoa Sa Đéc là một trong những làng hoa lớn nhất Việt Nam, nằm ở xã Tân Quy Đông, thành phố Sa Đéc, tỉnh Đồng Tháp. Làng hoa Sa Đéc có lịch sử hơn 100 năm, nổi tiếng với sự đa dạng về chủng loại hoa, màu sắc rực rỡ và được mệnh danh là \"xứ sở của các loài hoa kiểng\".",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699968605/mekongtravel/tinhthanh/dongthap/diadiem/xa6tmrqlhx3alxaswwgl.jpg"
+        },
+        {
+          "tenDiaDiem": "Cánh đồng lúa Tân Phú",
+          "moTa": "Cánh đồng lúa Tân Phú nằm ở huyện Cao Lãnh. Đây là một trong những cánh đồng lúa đẹp và trải rộng của Đồng Tháp, tạo nên bức tranh thiên nhiên hùng vĩ.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699968604/mekongtravel/tinhthanh/dongthap/diadiem/xxsypbbbj2e3pjgny69z.jpg"
+        },
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Gáo Giồng",
+          "moTa": "Khu du lịch sinh thái Gáo Giồng nằm ở huyện Cao Lãnh. Nơi đây có rừng tràm xanh mướt, ao cá, và cơ sở du lịch sinh thái phục vụ khách du lịch.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699968605/mekongtravel/tinhthanh/dongthap/diadiem/vihjmwic1hrs1saxw1qf.webp"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Kiên Giang",
+  "maTinh": "KG",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Hàu nướng mỡ hành",
+          "moTa": "Hàu nướng mỡ hành là món ăn đặc sản nổi tiếng của Kiên Giang. Hàu tươi ngon được nướng với mỡ hành thơm phức.",
+          "soTien": 80000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699969040/mekongtravel/tinhthanh/kiengiang/amthuc/hmkmsideesxyuhdnjrpm.jpg"
+        },
+        {
+          "tenMonAn": "Bún quậy Phú Quốc",
+          "moTa": "Bún quậy Phú Quốc là món ăn độc đáo của đảo ngọc. Bún được làm từ bột gạo và ăn kèm với nước dùng và hải sản tươi ngon.",
+          "soTien": 35000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699969043/mekongtravel/tinhthanh/kiengiang/amthuc/b6ldn8y7liunk7bpglyp.jpg"
+        },
+        {
+          "tenMonAn": "Sò điệp nướng mỡ hành",
+          "moTa": "Sò điệp nướng mỡ hành là món biển ngon và độc đáo. Sò điệp tươi ngon được nướng với mỡ hành và gia vị đặc biệt.",
+          "soTien": 120000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699969039/mekongtravel/tinhthanh/kiengiang/amthuc/krb9qx3ateo7gzkrmcir.jpg"
+        },
+        {
+          "tenMonAn": "Bánh canh cua Phú Quốc",
+          "moTa": "Bánh canh cua Phú Quốc là món ăn ngon và độc đáo của đảo ngọc. Bánh canh được làm từ bột gạo và nước dùng đậm đà, ăn kèm với cua và rau sống.",
+          "soTien": 45000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699969039/mekongtravel/tinhthanh/kiengiang/amthuc/zbmmi4whwlwmwgvf1455.jpg"
+        },
+        {
+          "tenMonAn": "Chuối nướng hạt sen",
+          "moTa": "Chuối nướng hạt sen là món tráng miệng phổ biến tại Phú Quốc. Chuối được nướng với hạt sen và nước cốt dừa thơm ngon.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699969035/mekongtravel/tinhthanh/kiengiang/amthuc/iz6lhblad6iuhk0cjifl.png"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Lặn biển Phú Quốc",
+          "moTa": "Tại đây, du khách có thể chiêm ngưỡng những rạn san hô đầy màu sắc, những đàn cá bơi lội tung tăng và nhiều loài sinh vật biển quý hiếm khác. Lặn biển ở Phú Quốc là một trải nghiệm thú vị và đáng nhớ.",
+          "soSao": 5,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699969285/mekongtravel/tinhthanh/kiengiang/diadiem/tyrimuo8onanqi0g1tid.jpg"
+        },
+        {
+          "tenDiaDiem": "Hà Tiên",
+          "moTa": "Hà Tiên thuộc tỉnh Kiên Giang, nổi tiếng với cảnh quan thiên nhiên hoang sơ, bãi biển đẹp và di sản lịch sử.",
+          "soSao": 5,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699969278/mekongtravel/tinhthanh/kiengiang/diadiem/npe3clm7eain2luolskg.jpg"
+        },
+        {
+          "tenDiaDiem": "Rạch Giá",
+          "moTa": "Rạch Giá là thành phố ven biển của tỉnh Kiên Giang. Thành phố này có cảng biển sầm uất và là điểm xuất phát đi các đảo xung quanh.",
+          "soSao": 3,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699969277/mekongtravel/tinhthanh/kiengiang/diadiem/anyze60jo5dwrczvx2h7.jpg"
+        },
+        {
+          "tenDiaDiem": "Cửa Cạn",
+          "moTa": "Cửa Cạn nằm ở huyện Kiên Lương. Nơi đây có cánh đồng muối trắng bát ngát, là nơi sản xuất muối truyền thống của Kiên Giang.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699969276/mekongtravel/tinhthanh/kiengiang/diadiem/kdg5izy8minovfvblntk.jpg"
+        },
+        {
+          "tenDiaDiem": "Bãi Sao",
+          "moTa": "Bãi Sao là một trong những bãi biển đẹp nhất ở Phú Quốc. Nơi đây có bãi cát trắng mịn, nước biển trong xanh và nhiều hoạt động thú vị.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699969279/mekongtravel/tinhthanh/kiengiang/diadiem/ocajunr6ygcfz2rneuwc.jpg"
+        }
+      ]
+    ]
+  }
+},
+{
+  "tenTinhThanh": "Sóc Trăng",
+  "maTinh": "ST",
+  "amThuc": {
+    "$each": [
+      [
+        {
+          "tenMonAn": "Bánh pía Sóc Trăng",
+          "moTa": "Bánh pía Sóc Trăng là một món ăn đặc sản của tỉnh. Bánh pía được làm từ bột gạo, nước cốt dừa, và các loại topping.",
+          "soTien": 25000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699972456/mekongtravel/tinhthanh/soctrang/amthuc/d9veyuidmz0jellfau8m.jpg"
+        },
+        {
+          "tenMonAn": "Bánh bao sầu riêng Sóc Trăng",
+          "moTa": "Bánh bao sầu riêng Sóc Trăng là một món ăn độc đáo. Bánh bao được làm từ bột mì, nhân sầu riêng, và các loại topping.",
+          "soTien": 15000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699972455/mekongtravel/tinhthanh/soctrang/amthuc/qvlmhjh2gphihhi33pur.jpg"
+        },
+        {
+          "tenMonAn": "Bánh bò Sóc Trăng",
+          "moTa": "Bánh bò Sóc Trăng là một món ăn phổ biến tại tỉnh. Bánh bò được làm từ bột gạo, nước cốt dừa, và các loại topping.",
+          "soTien": 10000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699972478/mekongtravel/tinhthanh/soctrang/amthuc/hbhl2jelyvodxh0swwhr.jpg"
+        },
+        {
+          "tenMonAn": "Bánh tét Sóc Trăng",
+          "moTa": "Bánh tét Sóc Trăng là một món ăn truyền thống của tỉnh. Bánh tét được làm từ gạo nếp, thịt heo, và các loại topping.",
+          "soTien": 12000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699972454/mekongtravel/tinhthanh/soctrang/amthuc/slov4dljo2x1feq2vjtc.jpg"
+        },
+        {
+          "tenMonAn": "Bánh canh cua Sóc Trăng",
+          "moTa": "Bánh canh cua Sóc Trăng là một món ăn đặc sản của tỉnh. Bánh canh được làm từ bột gạo, nước dùng đậm đà, và gạch cua.",
+          "soTien": 100000,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699972454/mekongtravel/tinhthanh/soctrang/amthuc/iywurpwp61uatl9a9ibp.jpg"
+        }
+      ]
+    ]
+  },
+  "diaDiem": {
+    "$each": [
+      [
+        {
+          "tenDiaDiem": "Khu du lịch sinh thái Hồ Sóc Trăng",
+          "moTa": "Khu du lịch sinh thái Hồ Sóc Trăng nằm ở huyện Châu Thành. Nơi đây có hồ nước ngọt lớn, các vườn cây trái, và hoạt động giải trí thú vị.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699972734/mekongtravel/tinhthanh/soctrang/diadiem/vpk3ypxj7qeoodbskytu.jpg"
+        },
+        {
+          "tenDiaDiem": "Vườn cò Tân Long",
+          "moTa": "Vườn cò Tân Long là một khu du lịch sinh thái nằm ở huyện Kế Sách, tỉnh Sóc Trăng. Vườn cò là nơi sinh sống của hàng chục nghìn con cò, là một địa điểm lý tưởng để tham quan, khám phá thiên nhiên và tìm hiểu về đời sống của loài cò.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699972732/mekongtravel/tinhthanh/soctrang/diadiem/ypmcu6wf0njxng6iz4qh.jpg"
+        },
+        {
+          "tenDiaDiem": "Chợ nổi Ngã Năm",
+          "moTa": "Chợ nổi Ngã Năm là một trong những chợ nổi lớn nhất ở miền Tây Nam Bộ. Chợ nằm ở vị trí giao nhau của 5 con sông lớn, là nơi giao thương của các tiểu thương đến từ các tỉnh miền Tây.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699972731/mekongtravel/tinhthanh/soctrang/diadiem/xf19edu9mphlwjabnftb.jpg"
+        },
+        {
+          "tenDiaDiem": "Chùa Dơi",
+          "moTa": "Chùa Dơi nằm ở huyện Châu Thành. Ngôi chùa nổi tiếng với những đàn dơi khổng lồ.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699972730/mekongtravel/tinhthanh/soctrang/diadiem/hnu2hek2rv8xnqtxhzii.jpg"
+        },
+        {
+          "tenDiaDiem": "Chùa Chén Kiểu",
+          "moTa": "Chùa Chén Kiểu hay còn gọi là chùa Sà Lôn, là một ngôi chùa Khmer nổi tiếng ở Sóc Trăng. Ngôi chùa được xây dựng từ năm 1815, nổi tiếng với những bức tường được ốp bằng mảnh chén, đĩa sứ.",
+          "soSao": 4,
+          "hinhAnh": "https://res.cloudinary.com/duwzchnsp/image/upload/v1699972746/mekongtravel/tinhthanh/soctrang/diadiem/xt8srgndohnpjg0zsf2c.jpg"
+        }
+      ]
+    ]
+  }
+}]

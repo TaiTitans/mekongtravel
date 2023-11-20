@@ -2,9 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:mekongtravel/screens/home_page.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:jwt_decoder/jwt_decoder.dart';
+import 'dart:core';
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomeScreen extends StatefulWidget {
+  final token;
+  const WelcomeScreen({@required this.token, Key? key}) : super(key: key);
+
   @override
+  State<WelcomeScreen> createState() => _WelcomeScreen();
+}
+
+class _WelcomeScreen extends State<WelcomeScreen> {
+  // late String email;
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   Map<String, dynamic> jwtDecodedToken = JwtDecoder.decode(widget.token);
+  //   email = jwtDecodedToken['email'];
+  // }
+
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(

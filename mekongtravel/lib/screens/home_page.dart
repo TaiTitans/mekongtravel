@@ -13,6 +13,8 @@ import 'package:geolocator_android/geolocator_android.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:mekongtravel/screens/settings.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:http/http.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -169,8 +171,58 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(height: 18),
-              CategoriesWidget(),
-              SizedBox(height: 30),
+              // CategoriesWidget(),
+
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: ImageSlideshow(
+                  /// Width of the [ImageSlideshow].
+                  width: double.infinity,
+
+                  /// Height of the [ImageSlideshow].
+                  height: 130,
+
+                  /// The page to show when first creating the [ImageSlideshow].
+                  initialPage: 0,
+
+                  /// The color to paint the indicator.
+                  indicatorColor: Colors.blue,
+
+                  /// The color to paint behind the indicator.
+                  indicatorBackgroundColor: Colors.grey,
+
+                  /// The widgets to display in the [ImageSlideshow].
+                  /// Add the sample image file into the images folder
+                  children: [
+                    Image.asset(
+                      'assets/images/homepageimg/1.png', // Update the asset path
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      'assets/images/homepageimg/2.png', // Update the asset path
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      'assets/images/homepageimg/3.png', // Update the asset path
+                      fit: BoxFit.cover,
+                    ),
+                  ],
+
+                  /// Called whenever the page in the center of the viewport changes.
+                  onPageChanged: (value) {
+                    print('Page changed: $value');
+                  },
+
+                  /// Auto scroll interval.
+                  /// Do not auto scroll with null or 0.
+                  autoPlayInterval: 3000,
+
+                  /// Loops back to the first slide.
+                  isLoop: true,
+                ),
+              ),
+
+              SizedBox(height: 20),
               Text(
                 "Địa điểm nổi bật",
                 style: TextStyle(
@@ -179,9 +231,9 @@ class _HomePageState extends State<HomePage> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(height: 18),
+              SizedBox(height: 16),
               PopularWList(),
-              SizedBox(height: 24),
+              SizedBox(height: 20),
               Text(
                 "Được yêu thích",
                 style: TextStyle(
@@ -190,7 +242,7 @@ class _HomePageState extends State<HomePage> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(height: 18),
+              SizedBox(height: 14),
               Expanded(
                 child: PopularHList(),
               ),

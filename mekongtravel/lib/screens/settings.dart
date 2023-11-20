@@ -1,9 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:rolling_switch/rolling_switch.dart';
+import 'package:jwt_decoder/jwt_decoder.dart';
+import 'dart:core';
 
-class Settings extends StatelessWidget {
-  const Settings({super.key});
+class Settings extends StatefulWidget {
+  const Settings({Key? key}) : super(key: key);
+
+  @override
+  State<Settings> createState() => _SettingsState();
+}
+
+class _SettingsState extends State<Settings> {
+
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +81,7 @@ class Settings extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'User Name',
+                          '',
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w500,
@@ -79,7 +92,7 @@ class Settings extends StatelessWidget {
                           height: 6,
                         ),
                         Text(
-                          'email_example@gmail.com',
+                          '',
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w400,

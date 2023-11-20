@@ -12,17 +12,20 @@ import 'package:scroll_page_view/pager/page_controller.dart';
 import 'package:scroll_page_view/pager/scroll_page_view.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import './sign_in.dart';
 
 class FoodsPage extends StatefulWidget {
   const FoodsPage({super.key});
-
   @override
   State<FoodsPage> createState() => _FoodsPageState();
 }
 
+
 class _FoodsPageState extends State<FoodsPage> {
   TextEditingController _searchController = TextEditingController();
-  bool _isSearching = false;
+  bool _isSearching = false;  
+  
 
   void _clearSearch() {
     setState(() {

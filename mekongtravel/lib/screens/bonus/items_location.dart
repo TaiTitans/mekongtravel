@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
+import 'package:mekongtravel/core/constants/diadiem.dart';
+import 'package:mekongtravel/screens/bonus/popular_width_list.dart';
 import 'package:readmore/readmore.dart';
 
+import '../foods_page.dart';
+
 class ItemLocation extends StatelessWidget {
-  const ItemLocation({Key? key});
+  final DiaDiemEach diaDiem;
+  const ItemLocation({Key? key, required this.diaDiem});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +29,8 @@ class ItemLocation extends StatelessWidget {
                       bottomLeft: Radius.circular(30),
                       bottomRight: Radius.circular(30),
                     ),
-                    child: Image.asset(
-                      'assets/images/popular/1.jpg', // Đường dẫn đến ảnh của bạn
+                    child: Image.network(
+                      diaDiem.hinhAnh, // Đường dẫn đến ảnh của bạn
                       fit: BoxFit.cover, // Hiển thị ảnh mà không bị bóp méo
                     ),
                   ),
@@ -58,7 +63,7 @@ class ItemLocation extends StatelessWidget {
                   child: Container(
                     color: Colors.black.withOpacity(0.5),
                     child: Text(
-                      'Lặn biển Phú Quốc',
+                      diaDiem.tenDiaDiem,
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 22,
@@ -107,7 +112,7 @@ class ItemLocation extends StatelessWidget {
                   MyColumnWithIconAndText(
                     iconData: Icons.star,
                     text1: 'Sao',
-                    text2: '5',
+                    text2: "5",
                   ),
                   MyColumnWithIconAndText(
                     iconData: Icons.location_on,
@@ -155,7 +160,7 @@ class ItemLocation extends StatelessWidget {
               alignment: Alignment.center,
               padding: EdgeInsets.fromLTRB(22, 0, 32, 0),
               child: ReadMoreText(
-                'Tại đây, du khách có thể chiêm ngưỡng những rạn san hô đầy màu sắc, những đàn cá bơi lội tung tăng và nhiều loài sinh vật biển quý hiếm khác. Lặn biển ở Phú Quốc là một trải nghiệm thú vị và đáng nhớ.',
+               diaDiem.moTa,
                 trimLines: 4,
                 textAlign: TextAlign.justify,
                 style: TextStyle(
@@ -215,7 +220,14 @@ class ItemLocation extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FoodsPage(),
+                  ),
+                );
+                  },
                   child: Ink(
                     width: 160,
                     height: 44,

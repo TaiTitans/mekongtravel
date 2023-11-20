@@ -7,14 +7,14 @@ const HPOPULAR_DATA = [
   },
   {
     "name": "Biển Phú Quốc",
-    "distance": "Kiêng Giang",
+    "distance": "Kiên Giang",
     "image": "assets/images/hpopular/bienphuquoc.jpg",
     "star": "5",
   },
   {
-    "name": "Chùa Som Rong",
+    "name": "Chùa Chùa Dơi",
     "distance": "Sóc Trăng",
-    "image": "assets/images/hpopular/somrong.jpg",
+    "image": "assets/images/hpopular/chuadoi.png",
     "star": "4.7",
   },
   {
