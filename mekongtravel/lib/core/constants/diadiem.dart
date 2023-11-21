@@ -59,7 +59,7 @@ class AmThuc {
 }
 
 class AmThucEach {
-    String tenMonAn;
+      String tenMonAn;
     String moTa;
     int soTien;
     String hinhAnh;
@@ -107,7 +107,6 @@ class DiaDiemEach {
     String moTa;
     int soSao;
     String hinhAnh;
-
     DiaDiemEach({
         required this.tenDiaDiem,
         required this.moTa,
@@ -128,4 +127,12 @@ class DiaDiemEach {
         "soSao": soSao,
         "hinhAnh": hinhAnh,
     };
+}
+String getTenTinhThanh(DiaDiem diaDiem, List<TinhThanh> tinhThanhList) {
+  for (var tinhThanh in tinhThanhList) {
+    if (tinhThanh.diaDiem.each.contains(diaDiem)) {
+      return tinhThanh.tenTinhThanh;
+    }
+  }
+  return ''; // Hoặc giá trị mặc định khác nếu không tìm thấy
 }

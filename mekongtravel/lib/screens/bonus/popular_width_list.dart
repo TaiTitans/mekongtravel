@@ -17,33 +17,57 @@ class PopularWList extends StatefulWidget {
 
 class _PopularWListState extends State<PopularWList> {
   List<DiaDiemEach>? diadiems;
+  List<TinhThanh>? tinhThanhList;
+  List<DiaDiemEach>? filteredDiadiems;
   var isLoaded = false;
   @override
   void initState() {
     // TODO: implement initState
-    super.initState();
-    getData();
+    super.initState(); 
+     getFilteredDiadiems();
   }
-getData() async {
-  diadiems = await RemoteService().getDiaDiem();
-  if(diadiems != null && diadiems!.length >= 5){
+   void getFilteredDiadiems() async {
+    // Lấy danh sách địa điểm
+    List<DiaDiemEach>? diadiems = await RemoteService().getDiaDiem();
+  
+    // Danh sách các địa điểm bạn muốn hiển thị
+    List<String> tenDiaDiemList = [
+      "Cồn Sơn Hậu Giang",
+      "Chùa Hang",
+      "Hòn Đá Bạc",
+      "Nhà công tử Bạc Liêu",
+      "Vườn cây Bưởi Mỏ Cày"
+    ];
+
+    // Lọc danh sách địa điểm dựa trên tenDiaDiemList
+  tinhThanhList = await RemoteService().getTinhThanhList(); 
+
+  if (diadiems != null) {
     setState(() {
+      filteredDiadiems = diadiems.where((diadiem) {
+        return tenDiaDiemList.contains(diadiem.tenDiaDiem);
+      }).toList();
       isLoaded = true;
+
+      // In giá trị filteredDiadiems ra console log
+      print('Filtered Diadiems: $filteredDiadiems');
+
+      // In giá trị tinhThanhList ra console log
+      print('Tinh Thanh List: $tinhThanhList');
     });
   }
-}
+  }
 
 
   @override
   Widget build(BuildContext context) {
-      List<String> tenDiaDiemList = [
-      "Lặn biển Phú Quốc",
-      "Chợ nổi Cái Răng",
-      "Ao Bà Om",
-      "Núi Sam",
-      "Bến Ninh Kiều"
+      List<String> tenTTList = [
+      "Kiên Giang",
+      "Cần Thơ",
+      "Trà Vinh",
+      "An Giang",
+      "Cần Thơ"
     ];
-
     List<String> itemNames = [
       "Lặn biển",
       "Chợ nổi",
@@ -80,12 +104,25 @@ if (!isLoaded) {
               onTap: () async {
                 // Create an instance of DiaDiem
 
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ItemLocation(diaDiem: diadiems![index]),
-                  ),
-                );
+
+  
+  if (filteredDiadiems != null &&
+    tinhThanhList != null &&
+    filteredDiadiems!.length > index &&
+    tinhThanhList!.length > index) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => ItemLocation(
+        diaDiem: filteredDiadiems![index],
+        NameTinhThanh: tinhThanhList![index],
+      ),
+    ),
+  );
+} else {
+  // Xử lý trường hợp không có đủ phần tử trong danh sách
+}
+  // Handle the case where diadiems or tinhThanhList is null or doesn't have data at the specified index
               },
               child: Stack(
                 alignment: Alignment.bottomLeft,

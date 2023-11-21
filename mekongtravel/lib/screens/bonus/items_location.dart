@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:mekongtravel/core/constants/diadiem.dart';
@@ -8,13 +10,15 @@ import '../foods_page.dart';
 
 class ItemLocation extends StatelessWidget {
   final DiaDiemEach diaDiem;
-  const ItemLocation({Key? key, required this.diaDiem});
-
+  final TinhThanh NameTinhThanh;
+  const ItemLocation({Key? key, required this.diaDiem, required this.NameTinhThanh});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return 
+    Scaffold(
       body: SafeArea(
-        child: Column(
+        child:SingleChildScrollView(
+child: Column(
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Stack(
@@ -112,12 +116,12 @@ class ItemLocation extends StatelessWidget {
                   MyColumnWithIconAndText(
                     iconData: Icons.star,
                     text1: 'Sao',
-                    text2: "5",
+                    text2: diaDiem.soSao.toString(),
                   ),
                   MyColumnWithIconAndText(
                     iconData: Icons.location_on,
                     text1: 'Tỉnh',
-                    text2: 'Kiên Giang',
+                    text2: NameTinhThanh.tenTinhThanh,
                   ),
                   MyColumnWithIconAndText(
                     iconData: Icons.confirmation_number,
@@ -160,7 +164,7 @@ class ItemLocation extends StatelessWidget {
               alignment: Alignment.center,
               padding: EdgeInsets.fromLTRB(22, 0, 32, 0),
               child: ReadMoreText(
-               diaDiem.moTa,
+              diaDiem.moTa,
                 trimLines: 4,
                 textAlign: TextAlign.justify,
                 style: TextStyle(
@@ -263,6 +267,8 @@ class ItemLocation extends StatelessWidget {
             ),
           ],
         ),
+        )
+        
       ),
     );
   }
