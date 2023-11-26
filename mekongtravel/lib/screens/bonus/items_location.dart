@@ -1,17 +1,15 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:mekongtravel/core/constants/diadiem.dart';
-import 'package:mekongtravel/screens/bonus/popular_width_list.dart';
 import 'package:readmore/readmore.dart';
 
 import '../foods_page.dart';
 
 class ItemLocation extends StatelessWidget {
   final DiaDiemEach diaDiem;
-  final TinhThanh NameTinhThanh;
-  const ItemLocation({Key? key, required this.diaDiem, required this.NameTinhThanh});
+  final TinhThanh nameTinhThanh;
+  const ItemLocation({ Key? key, required this.diaDiem, required this.nameTinhThanh});
   @override
   Widget build(BuildContext context) {
     return 
@@ -23,11 +21,11 @@ child: Column(
           children: [
             Stack(
               children: [
-                Container(
+                SizedBox(
                   width: 375, // Bỏ chiều rộng cố định
                   height: 361, // Căn giữa ảnh
                   child: ClipRRect(
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30),
                       bottomLeft: Radius.circular(30),
@@ -48,12 +46,12 @@ child: Column(
                       Navigator.of(context).pop(); // Trở về LocationsPage
                     },
                     child: Container(
-                      padding: EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        color: Color(0x4DFFFFFF),
+                        color: const Color(0x4DFFFFFF),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_new,
                         color: ColorPalette.text,
                         size: 20,
@@ -68,7 +66,7 @@ child: Column(
                     color: Colors.black.withOpacity(0.5),
                     child: Text(
                       diaDiem.tenDiaDiem,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 22,
                         color: ColorPalette.text,
@@ -81,8 +79,8 @@ child: Column(
                   right: 10,
                   child: Container(
                     // color: Colors.black.withOpacity(0.5),
-                    padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                    child: Row(
+                    padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                    child: const Row(
                       children: [
                         // Text(
                         //   '5',
@@ -104,7 +102,7 @@ child: Column(
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
             Container(
@@ -121,9 +119,9 @@ child: Column(
                   MyColumnWithIconAndText(
                     iconData: Icons.location_on,
                     text1: 'Tỉnh',
-                    text2: NameTinhThanh.tenTinhThanh,
+                    text2: nameTinhThanh.tenTinhThanh,
                   ),
-                  MyColumnWithIconAndText(
+                  const MyColumnWithIconAndText(
                     iconData: Icons.confirmation_number,
                     text1: 'Vé',
                     text2: 'Có',
@@ -131,23 +129,23 @@ child: Column(
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Container(
                 height: 1,
                 width: 330, // Chiều rộng của khối // Chiều cao 1 pixel
-                color: Color(0xFF263238) // Màu đỏ
+                color: const Color(0xFF263238) // Màu đỏ
                 ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Align(
               alignment: Alignment.centerLeft,
               child: Container(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                     left: 20), // Thay đổi khoảng cách bên trái theo nhu cầu
-                child: Text(
+                child: const Text(
                   'Thông tin',
                   style: TextStyle(
                     color: Colors.white,
@@ -157,17 +155,17 @@ child: Column(
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.fromLTRB(22, 0, 32, 0),
+              padding: const EdgeInsets.fromLTRB(22, 0, 32, 0),
               child: ReadMoreText(
               diaDiem.moTa,
                 trimLines: 4,
                 textAlign: TextAlign.justify,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFFD6D2D2),
                   fontSize: 16,
                   // fontWeight: FontWeight.w100,
@@ -177,14 +175,14 @@ child: Column(
                 trimMode: TrimMode.Line,
                 trimCollapsedText: '...Xem thêm',
                 trimExpandedText: ' Thu gọn',
-                moreStyle: TextStyle(
+                moreStyle: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                   color: ColorPalette.primaryColor,
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 90,
             ),
             Row(
@@ -195,12 +193,12 @@ child: Column(
                   child: Ink(
                     width: 160,
                     height: 44,
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       border: Border.all(color: ColorPalette.primaryColor),
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
@@ -228,19 +226,19 @@ child: Column(
                   Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => FoodsPage(),
+                    builder: (context) => const FoodsPage(),
                   ),
                 );
                   },
                   child: Ink(
                     width: 160,
                     height: 44,
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: ColorPalette.primaryColor,
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
@@ -279,7 +277,7 @@ class MyColumnWithIconAndText extends StatelessWidget {
   final String text1;
   final String text2;
 
-  MyColumnWithIconAndText({
+  const MyColumnWithIconAndText({super.key, 
     required this.iconData,
     required this.text1,
     required this.text2,
@@ -293,9 +291,9 @@ class MyColumnWithIconAndText extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius:
                 BorderRadius.circular(8), // Sử dụng hình tròn cho borderRadius
-            color: Color(0xFF263238), // Màu nền của Container
+            color: const Color(0xFF263238), // Màu nền của Container
           ),
-          padding: EdgeInsets.all(
+          padding: const EdgeInsets.all(
               8.0), // Khoảng cách từ biểu tượng đến viền Container
           child: Icon(
             iconData,
@@ -303,23 +301,23 @@ class MyColumnWithIconAndText extends StatelessWidget {
             color: Colors.white, // Màu của biểu tượng
           ),
         ),
-        SizedBox(height: 8.0),
+        const SizedBox(height: 8.0),
         Text(text1,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.w300,
               fontSize: 13,
               color: Color(0xFFD6D2D2),
             )),
-        SizedBox(
+        const SizedBox(
           height: 4,
         ),
         Text(text2,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 14,
               color: Colors.white,
             )),
-        SizedBox(
+        const SizedBox(
           height: 4,
         ),
       ],

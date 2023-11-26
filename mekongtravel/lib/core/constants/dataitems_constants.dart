@@ -6,27 +6,26 @@ const HPOPULAR_DATA = [
     "star": "4.9",
   },
   {
+    "name": "Núi Sam",
+    "distance": "An Giang",
+    "image": "assets/images/hpopular/nuicam.jpg",
+    "star": "4.7",
+  },{
+"name": "Làng hoa Sa Đéc",
+"distance": "Đồng Tháp",
+"image": "assets/images/hpopular/langhoasadec.jpg",
+"star": "4.5",
+},
+  {
     "name": "Biển Phú Quốc",
     "distance": "Kiên Giang",
     "image": "assets/images/hpopular/bienphuquoc.jpg",
     "star": "5",
   },
   {
-    "name": "Chùa Chùa Dơi",
+    "name": "Chùa Dơi",
     "distance": "Sóc Trăng",
     "image": "assets/images/hpopular/chuadoi.png",
-    "star": "4.7",
-  },
-  {
-    "name": "Làng hoa Sa Đéc",
-    "distance": "Đồng Tháp",
-    "image": "assets/images/hpopular/langhoasadec.jpg",
-    "star": "4.5",
-  },
-  {
-    "name": "Núi Cấm",
-    "distance": "An Giang",
-    "image": "assets/images/hpopular/nuicam.jpg",
     "star": "4.7",
   },
 ];

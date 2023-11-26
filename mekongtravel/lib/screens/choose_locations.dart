@@ -3,6 +3,8 @@ import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:group_list_view/group_list_view.dart';
 import 'package:mekongtravel/core/constants/app_colors.dart';
 
+import 'location_item_list.dart';
+
 Map<String, List> _elements = {
   'Đồng Bằng Sông Cửu Long': [
     'Cần Thơ',
@@ -35,6 +37,7 @@ class ChooseLocations extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Color(0xFF263238), // Thay đổi màu
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
@@ -56,6 +59,7 @@ class ChooseLocations extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
+                  color: Colors.white,
                 ),
               ),
             ],
@@ -106,23 +110,36 @@ class ChooseLocations extends StatelessWidget {
     String user = _elements.values.toList()[index.section][index.index];
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: Card(
-        elevation: 8,
-        child: ListTile(
-          contentPadding:
-              const EdgeInsets.symmetric(horizontal: 18, vertical: 10.0),
-          leading: CircleAvatar(
-            child: Text(
-              _getInitials(user),
-              style: TextStyle(color: Colors.white, fontSize: 18),
+      child: GestureDetector(
+        onTap: (){
+          print('a');
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => LocationItemList(
+                val: user,
+              ),
             ),
-            backgroundColor: _getAvatarColor(user),
+          );
+        },
+        child: Card(
+          elevation: 8,
+          child: ListTile(
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 18, vertical: 10.0),
+            leading: CircleAvatar(
+              child: Text(
+                _getInitials(user),
+                style: TextStyle(color: Colors.white, fontSize: 18),
+              ),
+              backgroundColor: _getAvatarColor(user),
+            ),
+            title: Text(
+              _elements.values.toList()[index.section][index.index],
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+            ),
+            trailing: Icon(Icons.arrow_forward_ios),
           ),
-          title: Text(
-            _elements.values.toList()[index.section][index.index],
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
-          ),
-          trailing: Icon(Icons.arrow_forward_ios),
         ),
       ),
     );

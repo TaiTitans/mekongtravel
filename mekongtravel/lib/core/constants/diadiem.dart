@@ -27,6 +27,8 @@ class TinhThanh {
         required this.diaDiem,
     });
 
+
+
     factory TinhThanh.fromJson(Map<String, dynamic> json) => TinhThanh(
         tenTinhThanh: json["tenTinhThanh"],
         maTinh: json["maTinh"],
@@ -93,10 +95,17 @@ class DiaDiem {
         required this.each,
     });
 
-    factory DiaDiem.fromJson(Map<String, dynamic> json) => DiaDiem(
-        each: List<List<DiaDiemEach>>.from(json["\u0024each"].map((x) => List<DiaDiemEach>.from(x.map((x) => DiaDiemEach.fromJson(x))))),
-    );
-
+    factory DiaDiem.fromJson(Map<String, dynamic> json) {
+        List<DiaDiemEach> flattenedDiaDiemEachList = [];
+        for (List<DiaDiemEach> nestedList in json['\u0024each']) {
+            for (DiaDiemEach diaDiemEach in nestedList) {
+                flattenedDiaDiemEachList.add(diaDiemEach);
+            }
+        }
+        return DiaDiem(
+            each: [flattenedDiaDiemEachList], // Wrap the list in an additional List object
+        );
+    }
     Map<String, dynamic> toJson() => {
         "\u0024each": List<dynamic>.from(each.map((x) => List<dynamic>.from(x.map((x) => x.toJson())))),
     };
@@ -107,11 +116,15 @@ class DiaDiemEach {
     String moTa;
     int soSao;
     String hinhAnh;
+    String? tenTinhThanh;
+    String? maTinhThanh;
     DiaDiemEach({
         required this.tenDiaDiem,
         required this.moTa,
         required this.soSao,
         required this.hinhAnh,
+        this.tenTinhThanh,
+        this.maTinhThanh
     });
 
     factory DiaDiemEach.fromJson(Map<String, dynamic> json) => DiaDiemEach(
