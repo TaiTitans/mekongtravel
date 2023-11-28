@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:readmore/readmore.dart';
 import 'package:simple_star_rating/simple_star_rating.dart';
+import 'package:mekongtravel/core/constants/diadiem.dart';
+import 'package:intl/intl.dart';
+
 class FoodsItem extends StatelessWidget {
-  const FoodsItem({super.key});
+  final AmThucEach amThuc;
+  final TinhThanh nameTinhThanh;
+  const FoodsItem({Key? key, required this.amThuc, required this.nameTinhThanh});
 
 
   @override
@@ -26,8 +31,8 @@ class FoodsItem extends StatelessWidget {
                         bottomLeft: Radius.circular(30),
                         bottomRight: Radius.circular(30),
                       ),
-                      child: Image.asset(
-                        'assets/images/foods/CanTho/laumam.jpg', // Đường dẫn đến ảnh của bạn
+                      child: Image.network(
+                        amThuc.hinhAnh, // Đường dẫn đến ảnh của bạn
                         fit: BoxFit.cover, // Hiển thị ảnh mà không bị bóp méo
                       ),
                     ),
@@ -109,7 +114,7 @@ class FoodsItem extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start, // Căn trái cho cột con
                     children: [
                       Text(
-                        'Lẩu mắm',
+                        amThuc.tenMonAn,
                         style: TextStyle(
                           color: ColorPalette.text,
                           fontSize: 30,
@@ -140,7 +145,7 @@ class FoodsItem extends StatelessWidget {
                             width: 6,
                           ),
                           Text(
-                            'Cần Thơ',
+                            amThuc.tenTinhThanh.toString(),
                             style: TextStyle(
                               color: ColorPalette.text,
                               fontWeight: FontWeight.w400,
@@ -166,7 +171,7 @@ class FoodsItem extends StatelessWidget {
                                 width: 4,
                               ),
                               Text(
-                                '150000 VND',
+                                '${NumberFormat.currency(locale: 'vi').format(amThuc.soTien)}',
                                 style: TextStyle(
                                   color: ColorPalette.text,
                                   fontWeight: FontWeight.w400,
@@ -221,7 +226,7 @@ class FoodsItem extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: EdgeInsets.fromLTRB(22, 0, 32, 0),
                 child: ReadMoreText(
-                  'Lẩu mắm Cần Thơ là một món ăn dân dã nhưng mang đậm hương vị của miền Tây sông nước. Món ăn này được chế biến từ mắm cá linh, các loại rau củ và hải sản. Nước lèo của lẩu mắm có vị ngọt thanh, đậm đà, hòa quyện với vị chua của chanh, vị cay của ớt, tạo nên một hương vị khó quên. Lẩu mắm thường được ăn kèm với bún, các loại rau sống và bánh tráng.',
+                  amThuc.moTa,
                   trimLines: 4,
                   textAlign: TextAlign.justify,
                   style: TextStyle(

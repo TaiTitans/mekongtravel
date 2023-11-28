@@ -16,7 +16,7 @@ class ResponseModel {
       tenTinhThanh = json['tenTinhThanh'] as String;
       maTinh =  json['maTinh'] as String;
       addressModel = json['diaDiem'] != null ? CuisineOrAddressModel.fromJsonDynamic(json['diaDiem']) : null;
-      cuisineModel = null;
+      cuisineModel = json['amThuc'] != null ? CuisineOrAddressModel.fromJsonDynamic(json['amThuc']) : null;
   }
 }
 

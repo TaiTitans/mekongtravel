@@ -51,10 +51,17 @@ class AmThuc {
         required this.each,
     });
 
-    factory AmThuc.fromJson(Map<String, dynamic> json) => AmThuc(
-        each: List<List<AmThucEach>>.from(json["\u0024each"].map((x) => List<AmThucEach>.from(x.map((x) => AmThucEach.fromJson(x))))),
-    );
-
+    factory AmThuc.fromJson(Map<String, dynamic> json) {
+        List<AmThucEach> flattenedAmThucEachList = [];
+        for (List<AmThucEach> nestedList in json['\u0024each']) {
+            for (AmThucEach amThucEach in nestedList) {
+                flattenedAmThucEachList.add(amThucEach);
+            }
+        }
+        return AmThuc(
+            each: [flattenedAmThucEachList], // Wrap the list in an additional List object
+        );
+    }
     Map<String, dynamic> toJson() => {
         "\u0024each": List<dynamic>.from(each.map((x) => List<dynamic>.from(x.map((x) => x.toJson())))),
     };
@@ -65,12 +72,15 @@ class AmThucEach {
     String moTa;
     int soTien;
     String hinhAnh;
-
+      String? tenTinhThanh;
+      String? maTinhThanh;
     AmThucEach({
         required this.tenMonAn,
         required this.moTa,
         required this.soTien,
         required this.hinhAnh,
+        this.tenTinhThanh,
+        this.maTinhThanh
     });
 
     factory AmThucEach.fromJson(Map<String, dynamic> json) => AmThucEach(

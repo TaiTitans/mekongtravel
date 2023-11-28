@@ -1,28 +1,29 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:mekongtravel/core/constants/remote_service.dart';
 import 'package:mekongtravel/core/model/response_model.dart';
 
 import '../core/constants/color_constants.dart';
 import '../core/constants/diadiem.dart';
-import 'bonus/items_location.dart';
+import 'foods_item.dart';
 
-class LocationItemList extends StatefulWidget {
+class FoodsItemList extends StatefulWidget {
   @required String val;
-  LocationItemList({Key? key, required this.val}) : super(key: key);
+  FoodsItemList({Key? key, required this.val}) : super(key: key);
   @override
-  State<LocationItemList> createState() => _LocationItemListState();
+  State<FoodsItemList> createState() => _FoodsItemListState();
 }
 
-class _LocationItemListState extends State<LocationItemList>{
+class _FoodsItemListState extends State<FoodsItemList>{
 
   Future<List<InfoDetailModel>?> getListByNameProvince() async {
-    List<InfoDetailModel>? diadiems = await RemoteService().getDiaDiem();
-    if (diadiems != null) {
-      var list = diadiems!.where((item) => (item.tenTinhThanh ?? "").contains(widget.val) ).toList();
+    List<InfoDetailModel>? amthucs = await RemoteService().getAmThuc();
+    if (amthucs != null) {
+      var list = amthucs!.where((item) => (item.tenTinhThanh ?? "").contains(widget.val) ).toList();
       return list;
     } else {
-      print('Error fetching diadiems');
+      print('Error fetching amthucs');
       return null;
     }
   }
@@ -43,7 +44,7 @@ class _LocationItemListState extends State<LocationItemList>{
           title: Row(
             children:[// Khoảng cách giữa nút và dòng title
               Text(
-                'Danh sách địa điểm',
+                'Danh sách ẩm thực',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
@@ -58,13 +59,13 @@ class _LocationItemListState extends State<LocationItemList>{
           builder: (context, snapshot) {
             if(snapshot.hasData){
               return Padding(
-               padding: const EdgeInsets.only(
-                 top: 10
-               ),
+                padding: const EdgeInsets.only(
+                    top: 10
+                ),
                 child: ListView.builder(
                     itemCount: snapshot.data?.length ?? 0,
                     itemBuilder: (context, index){
-                      return LocationItemCard(item: snapshot.data![index]);
+                      return FoodItemCard(item: snapshot.data![index]);
                     }),
               );
             }
@@ -79,11 +80,11 @@ class _LocationItemListState extends State<LocationItemList>{
 
 }
 
-class LocationItemCard extends StatelessWidget{
+class FoodItemCard extends StatelessWidget{
 
   @required InfoDetailModel item;
 
-  LocationItemCard({Key? key, required this.item}) : super(key: key);
+  FoodItemCard({Key? key, required this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -92,12 +93,12 @@ class LocationItemCard extends StatelessWidget{
         TinhThanh tinhThanh = TinhThanh(tenTinhThanh: item.tenTinhThanh ?? "",
             maTinh: item.maTinh ?? "", amThuc: AmThuc(each: []), diaDiem: DiaDiem(each: []));
 
-        DiaDiemEach diaDiemEach  = DiaDiemEach(tenDiaDiem: item.tenDiaDiem ?? "", moTa: item.moTa ?? "", soSao:item.soSao != null ? int.parse(item.soSao.toString()) : 0, hinhAnh: item.hinhAnh ?? "");
+        AmThucEach amThucEach  = AmThucEach(tenMonAn: item.tenMonAn ?? "", moTa: item.moTa ?? "", soTien:item.soTien != null ? int.parse(item.soTien.toString()) : 0, hinhAnh: item.hinhAnh ?? "");
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ItemLocation(
-              diaDiem: diaDiemEach,
+            builder: (context) => FoodsItem(
+              amThuc: amThucEach,
               nameTinhThanh: tinhThanh,
             ),
           ),
@@ -106,54 +107,54 @@ class LocationItemCard extends StatelessWidget{
       child: Card(
         margin: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  SizedBox(
-                    height: MediaQuery.of(context).size.width * 0.25,
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    child:ClipRRect(
-                      borderRadius: BorderRadius.circular(8), // Đặt BorderRadius cho hình ảnh
-                      child: Image.network(
-                        item.hinhAnh ?? "",
-                        fit: BoxFit.cover,
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    SizedBox(
+                      height: MediaQuery.of(context).size.width * 0.25,
+                      width: MediaQuery.of(context).size.width * 0.3,
+                      child:ClipRRect(
+                        borderRadius: BorderRadius.circular(8), // Đặt BorderRadius cho hình ảnh
+                        child: Image.network(
+                          item.hinhAnh ?? "",
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                  ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(child: Column(
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(child: Column(
                       children: [
-                       Row(
-                         children: [
-                           Expanded(child: Text('${item.tenDiaDiem != null ? (item.tenDiaDiem ?? "") : ""}', style: TextStyle(
-                             fontWeight: FontWeight.w600,
-                             fontSize: 15,
-                             color: ColorPalette.backgroundColor
-                           ),)),
-                         ],
-                       ),
+                        Row(
+                          children: [
+                            Expanded(child: Text('${item.tenMonAn != null ? (item.tenMonAn ?? "") : ""}', style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15,
+                                color: ColorPalette.backgroundColor
+                            ),)),
+                          ],
+                        ),
                         const SizedBox(height: 10),
                         Row(
                           children: [
-                            Container(child: Text('Đánh giá: ', style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 13
+                            Container(child: Text('Giá tiền: ', style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13
                             ),), ),
-                            Container(child: Text('${item.soSao ?? 0} ', style: TextStyle(
+                            Container(child: Text('${NumberFormat.currency(locale: 'vi').format(item.soTien) ?? 0} ', style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 13
                             ),)),
                             Container(child: Icon(
-                              Icons.star,
+                              Icons.money,
                               color: Colors.deepOrangeAccent,
                               size: 16,
                             ))
 
                           ],
                         ),
-                      const SizedBox(height:10),
+                        const SizedBox(height:10),
                         Row(
                           children: [
                             Icon(
@@ -173,11 +174,11 @@ class LocationItemCard extends StatelessWidget{
                         ),
                       ],
                     ),
-                  )
-                ],
-              ),
-            ],
-          )
+                    )
+                  ],
+                ),
+              ],
+            )
         ),
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
 import 'package:mekongtravel/core/constants/dataitems_constants.dart';
-import 'package:mekongtravel/screens/aroundmaps.dart';
+import 'package:mekongtravel/screens/foods_item_list.dart';
 import 'package:mekongtravel/screens/bonus/items_location.dart';
 import 'package:mekongtravel/screens/choose_locations.dart';
 import 'package:mekongtravel/screens/sign_up.dart';
@@ -63,7 +63,7 @@ class LocationsItems extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                             child: Image.asset(
                               LOCATIONSPAGE[0]["image"] ?? '',
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                           Positioned(

@@ -92,164 +92,171 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 25),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.share_location,
-                      color: ColorPalette.primaryColor,
-                      size: 16,
-                    ),
-                    SizedBox(width: 5),
-                    Text(
-                      "${_currentAddress}",
-                      style: TextStyle(
-                        color: ColorPalette.text,
-                        fontSize: 12,
+          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+          child:
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.share_location,
+                        color: ColorPalette.primaryColor,
+                        size: 16,
                       ),
-                    ),
-                    SizedBox(width: 5),
-                    Icon(
-                      Icons.expand_more,
-                      color: ColorPalette.primaryColor,
-                      size: 16,
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 12),
-              Text(
-                "Let's Travel",
-                style: TextStyle(
-                  color: ColorPalette.text,
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(height: 14),
-              Container(
-                height: 50, // Set the desired height
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  color: Color(0xFF263238),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(width: 10),
-                    Icon(
-                      Icons.search,
-                      size: 30,
-                      color: ColorPalette.primaryColor, // Change icon color
-                    ),
-                    SizedBox(width: 10),
-                    Expanded(
-                      child: TextField(
-                        controller: _searchController,
-                        style:
-                            TextStyle(color: Colors.black), // Change text color
-                        decoration: InputDecoration(
-                          hintText: 'Tìm kiếm ...',
-                          hintStyle: TextStyle(
-                              color: ColorPalette
-                                  .subColorText), // Change hint text color
-                          border: InputBorder.none,
+                      SizedBox(width: 5),
+                      Text(
+                        "${_currentAddress}",
+                        style: TextStyle(
+                          color: ColorPalette.text,
+                          fontSize: 12,
                         ),
                       ),
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.clear),
-                      onPressed: _clearSearch, // Use the clear function
-                      color: ColorPalette.subColorText, // Change icon color
-                    ),
-                  ],
+                      SizedBox(width: 5),
+                      Icon(
+                        Icons.expand_more,
+                        color: ColorPalette.primaryColor,
+                        size: 16,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(height: 18),
-              // CategoriesWidget(),
-
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: ImageSlideshow(
-                  /// Width of the [ImageSlideshow].
-                  width: double.infinity,
-
-                  /// Height of the [ImageSlideshow].
-                  height: 130,
-
-                  /// The page to show when first creating the [ImageSlideshow].
-                  initialPage: 0,
-
-                  /// The color to paint the indicator.
-                  indicatorColor: Colors.blue,
-
-                  /// The color to paint behind the indicator.
-                  indicatorBackgroundColor: Colors.grey,
-
-                  /// The widgets to display in the [ImageSlideshow].
-                  /// Add the sample image file into the images folder
-                  children: [
-                    Image.asset(
-                      'assets/images/homepageimg/1.png', // Update the asset path
-                      fit: BoxFit.cover,
-                    ),
-                    Image.asset(
-                      'assets/images/homepageimg/2.png', // Update the asset path
-                      fit: BoxFit.cover,
-                    ),
-                    Image.asset(
-                      'assets/images/homepageimg/3.png', // Update the asset path
-                      fit: BoxFit.cover,
-                    ),
-                  ],
-
-                  /// Called whenever the page in the center of the viewport changes.
-                  onPageChanged: (value) {
-                    print('Page changed: $value');
-                  },
-
-                  /// Auto scroll interval.
-                  /// Do not auto scroll with null or 0.
-                  autoPlayInterval: 3000,
-
-                  /// Loops back to the first slide.
-                  isLoop: true,
+                SizedBox(height: 12),
+                Text(
+                  "Let's Travel",
+                  style: TextStyle(
+                    color: ColorPalette.text,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
-              ),
+                SizedBox(height: 14),
+                Container(
+                  height: 50, // Set the desired height
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: Color(0xFF263238),
+                  ),
+                  child: Row(
+                    children: [
+                      SizedBox(width: 10),
+                      Icon(
+                        Icons.search,
+                        size: 30,
+                        color: ColorPalette.primaryColor, // Change icon color
+                      ),
+                      SizedBox(width: 10),
+                      Expanded(
+                        child: TextField(
+                          controller: _searchController,
+                          style:
+                          TextStyle(color: Colors.black), // Change text color
+                          decoration: InputDecoration(
+                            hintText: 'Tìm kiếm ...',
+                            hintStyle: TextStyle(
+                                color: ColorPalette
+                                    .subColorText), // Change hint text color
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.clear),
+                        onPressed: _clearSearch, // Use the clear function
+                        color: ColorPalette.subColorText, // Change icon color
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 18),
+                // CategoriesWidget(),
 
-              SizedBox(height: 20),
-              Text(
-                "Địa điểm nổi bật",
-                style: TextStyle(
-                  color: ColorPalette.text,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: ImageSlideshow(
+                    /// Width of the [ImageSlideshow].
+                    width: double.infinity,
+
+                    /// Height of the [ImageSlideshow].
+                    height: 130,
+
+                    /// The page to show when first creating the [ImageSlideshow].
+                    initialPage: 0,
+
+                    /// The color to paint the indicator.
+                    indicatorColor: Colors.blue,
+
+                    /// The color to paint behind the indicator.
+                    indicatorBackgroundColor: Colors.grey,
+
+                    /// The widgets to display in the [ImageSlideshow].
+                    /// Add the sample image file into the images folder
+                    children: [
+                      Image.asset(
+                        'assets/images/homepageimg/1.png', // Update the asset path
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/homepageimg/2.png', // Update the asset path
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/homepageimg/3.png', // Update the asset path
+                        fit: BoxFit.cover,
+                      ),
+                    ],
+
+                    /// Called whenever the page in the center of the viewport changes.
+                    onPageChanged: (value) {
+                      print('Page changed: $value');
+                    },
+
+                    /// Auto scroll interval.
+                    /// Do not auto scroll with null or 0.
+                    autoPlayInterval: 3000,
+
+                    /// Loops back to the first slide.
+                    isLoop: true,
+                  ),
                 ),
-              ),
-              SizedBox(height: 16),
-              PopularWList(),
-              SizedBox(height: 20),
-              Text(
-                "Được yêu thích",
-                style: TextStyle(
-                  color: ColorPalette.text,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
+
+                SizedBox(height: 20),
+                Text(
+                  "Địa điểm nổi bật",
+                  style: TextStyle(
+                    color: ColorPalette.text,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
-              ),
-              SizedBox(height: 14),
-              Expanded(
-                child: PopularHList(),
-              ),
-            ],
-          ),
+                SizedBox(height: 16),
+                PopularWList(),
+                SizedBox(height: 20),
+                Text(
+                  "Được yêu thích",
+                  style: TextStyle(
+                    color: ColorPalette.text,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(height: 14),
+                Expanded(
+                  child: ListView(
+                    children: [
+                    PopularHList(),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )
         ),
-      ),
+
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.circular(30),
         child: BottomNavyBar(
