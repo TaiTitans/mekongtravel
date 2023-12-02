@@ -4,6 +4,7 @@ import 'package:mekongtravel/core/constants/dataitems_constants.dart';
 import 'package:mekongtravel/screens/foods_item_list.dart';
 import 'package:mekongtravel/screens/bonus/items_location.dart';
 import 'package:mekongtravel/screens/choose_locations.dart';
+import 'package:mekongtravel/screens/maps_location.dart';
 import 'package:mekongtravel/screens/sign_up.dart';
 
 class LocationsItems extends StatelessWidget {
@@ -124,7 +125,7 @@ class LocationsItems extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignUp(),
+                              builder: (context) => const MapsScreen(),
                             ));
                       },
                       child: Stack(

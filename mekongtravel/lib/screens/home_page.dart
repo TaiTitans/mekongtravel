@@ -212,7 +212,6 @@ class _HomePageState extends State<HomePage> {
 
                     /// Called whenever the page in the center of the viewport changes.
                     onPageChanged: (value) {
-                      print('Page changed: $value');
                     },
 
                     /// Auto scroll interval.

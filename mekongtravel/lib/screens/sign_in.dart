@@ -31,27 +31,44 @@ class _SignInPageState extends State<SignIn> {
 
   void loginUser() async {
     if (emailController.text.isNotEmpty && passwordController.text.isNotEmpty) {
-      var regBody = {
-        "email": emailController.text,
-        "password": passwordController.text
-      };
-      var response = await http.post(Uri.parse(login),
+      try {
+        var regBody = {
+          "email": emailController.text,
+          "password": passwordController.text
+        };
+        var response = await http.post(
+          Uri.parse(login),
           headers: {"Content-Type": "application/json"},
-          body: jsonEncode(regBody));
-
-      var jsonResponse = jsonDecode(response.body);
-      if (jsonResponse['status']) {
-        var myToken = jsonResponse['token'];
-        prefs.setString('token', myToken);
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => WelcomeScreen(token: myToken)),
+          body: jsonEncode(regBody),
         );
-      } else {
-        print('SOmething went wrong');
+
+        var jsonResponse = jsonDecode(response.body);
+        if (jsonResponse['status']) {
+          var myToken = jsonResponse['token'];
+          prefs.setString('token', myToken);
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => WelcomeScreen(token: myToken)),
+          );
+        } else {
+          setState(() {
+            _isNotValidate = true;
+          });
+        }
+      } catch (error) {
+        // Xử lý khi có lỗi xảy ra trong quá trình gửi yêu cầu HTTP
+        print("Có lỗi xảy ra: $error");
+        setState(() {
+          _isNotValidate = true;
+        });
       }
+    } else {
+      setState(() {
+        _isNotValidate = true;
+      });
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -140,8 +157,7 @@ class _SignInPageState extends State<SignIn> {
                         controller: emailController,
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
-                          errorText:
-                              _isNotValidate ? "Nhap lai thong tin" : null,
+                          errorText: _isNotValidate ? "Vui lòng kiểm tra lại thông tin đăng nhập" : null,
                           labelText: 'Email',
                           prefixIcon: Container(
                             margin: EdgeInsets.only(right: 10),
@@ -149,13 +165,12 @@ class _SignInPageState extends State<SignIn> {
                             height: 60,
                             decoration: BoxDecoration(
                               color: ColorPalette.primaryColor,
-                              borderRadius:
-                                  BorderRadius.circular(8), // Màu xanh
+                              borderRadius: BorderRadius.circular(8),
                             ),
                             child: Icon(
-                              Icons.email, // Đổi thành biểu tượng mong muốn
-                              color: Colors.white, // Màu của biểu tượng
-                              size: 20, // Kích thước của biểu tượng
+                              Icons.email,
+                              color: Colors.white,
+                              size: 20,
                             ),
                           ),
                         ),
@@ -175,6 +190,7 @@ class _SignInPageState extends State<SignIn> {
                         controller: passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
+                          errorText: _isNotValidate ? "Vui lòng kiểm tra lại thông tin đăng nhập" : null,
                           labelText: 'Mật khẩu',
                           prefixIcon: Container(
                             margin: EdgeInsets.only(right: 10),
@@ -202,23 +218,27 @@ class _SignInPageState extends State<SignIn> {
 
                     Container(
                       alignment: Alignment.center,
-                      child: ElevatedButton(
+                      child:ElevatedButton(
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                              ColorPalette.primaryColor), // Đổi màu nền tại đây
+                          backgroundColor: MaterialStateProperty.all(ColorPalette.primaryColor),
                           shape: MaterialStateProperty.all(
                             RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                  26), // Đặt giá trị cho `borderRadius` tại đây
+                              borderRadius: BorderRadius.circular(26),
                             ),
                           ),
-                          minimumSize: MaterialStateProperty.all(Size(
-                              200, 50)), // Điều chỉnh kích thước của nút ở đây
+                          minimumSize: MaterialStateProperty.all(Size(200, 50)),
                         ),
                         onPressed: () {
+                          setState(() {
+                            _isNotValidate = false; // Đặt lại trạng thái lỗi về false
+                          });
+
                           loginUser();
                         },
-                        child: Text('Đăng nhập'),
+                        child: Text(
+                          'Đăng nhập',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                     SizedBox(height: 20),
@@ -228,7 +248,13 @@ class _SignInPageState extends State<SignIn> {
                         onTap: () {
                           Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
-                              builder: (context) => SignUp(),
+                              builder: (context) {
+                                setState(() {
+                                  _isNotValidate = false; // Đặt lại trạng thái lỗi về false
+                                });
+
+                                return SignUp();
+                              },
                             ),
                           );
                         },

@@ -145,7 +145,7 @@ class FoodsItem extends StatelessWidget {
                             width: 6,
                           ),
                           Text(
-                            amThuc.tenTinhThanh.toString(),
+                            nameTinhThanh.tenTinhThanh,
                             style: TextStyle(
                               color: ColorPalette.text,
                               fontWeight: FontWeight.w400,
