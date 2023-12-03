@@ -40,3 +40,22 @@ exports.login = async (req, res, next) => {
     res.status(500).json({ status: false, error: "Login failed" });
   }
 };
+exports.logout = async (req, res, next) => {
+  try {
+    // Thực hiện logic xóa hoặc hủy bỏ token ở đây, ví dụ:
+    // Lấy token từ request headers
+    const token = req.headers.authorization;
+
+    // Xóa hoặc hủy bỏ token - ví dụ sử dụng JWT
+    // Cách này sẽ tùy thuộc vào cách bạn triển khai xác thực và xử lý token trên server
+    // Ví dụ:
+    // Blacklist token
+    // Invalidate token
+    // Xóa token khỏi cơ sở dữ liệu
+
+    res.json({ status: true, message: 'Đăng xuất thành công' });
+  } catch (error) {
+    console.error("Error in logout:", error);
+    res.status(500).json({ status: false, error: "Đăng xuất thất bại" });
+  }
+};

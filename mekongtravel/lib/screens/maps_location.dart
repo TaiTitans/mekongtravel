@@ -57,17 +57,7 @@ class _MapsScreenState extends State<MapsScreen> {
           ],
         ),
       ),
-      body: Column(
-        children: <Widget>[
-          Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            child: GoogleMap(
-              onMapCreated: (GoogleMapController controller) {},
-            ),
-          ),
-        ],
-      ),
+      body: Container(),
     );
   }
 

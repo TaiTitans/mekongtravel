@@ -155,5 +155,22 @@ Future<List<InfoDetailModel>?> getAmThuc() async {
   // Xử lý trường hợp lỗi hoặc không có dữ liệu
   return null;
 }
+List<DiaDiemEach> searchDiaDiem(String query, List<TinhThanh> tinhThanhList) {
+  List<DiaDiemEach> searchResult = [];
+
+  // Loop through each TinhThanh
+  for (var tinhThanh in tinhThanhList) {
+    for (var diaDiemList in tinhThanh.diaDiem.each) {
+      for (var diaDiem in diaDiemList) {
+        // Check if 'tenDiaDiem' contains the query string (case-insensitive)
+        if (diaDiem.tenDiaDiem.toLowerCase().contains(query.toLowerCase())) {
+          searchResult.add(diaDiem); // Add matched 'DiaDiemEach' to search results
+        }
+      }
+    }
+  }
+
+  return searchResult;
+}
 }
 

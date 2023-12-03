@@ -15,6 +15,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:mekongtravel/screens/settings.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:http/http.dart';
+import '../core/constants/diadiem.dart';
+import 'package:mekongtravel/core/constants/remote_service.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -24,7 +26,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   TextEditingController _searchController = TextEditingController();
   bool _isSearching = false;
-
+  List<DiaDiemEach> searchResults = [];
+  RemoteService _remoteService = RemoteService();
+  List<TinhThanh> tinhThanhList = [];
   void _clearSearch() {
     setState(() {
       _searchController.clear();
@@ -46,8 +50,12 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     _getCurrentLocation();
+    _fetchTinhThanhList();
   }
-
+  Future<void> _fetchTinhThanhList() async {
+    List<TinhThanh> tinhThanhList = await _remoteService.getTinhThanhList();
+    // Now you have tinhThanhList, you can use it for search
+  }
   Future<void> _getCurrentLocation() async {
     servicePermission = await Geolocator.isLocationServiceEnabled();
     if (!servicePermission) {
@@ -88,7 +96,18 @@ class _HomePageState extends State<HomePage> {
       print("Error fetching address: $e");
     }
   }
-
+  void _onSearch(String query) {
+    if (query.isNotEmpty) {
+      List<DiaDiemEach> results = _remoteService.searchDiaDiem(query, tinhThanhList);
+      setState(() {
+        searchResults = results;
+      });
+    } else {
+      setState(() {
+        searchResults = [];
+      });
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -153,15 +172,13 @@ class _HomePageState extends State<HomePage> {
                       Expanded(
                         child: TextField(
                           controller: _searchController,
-                          style:
-                          TextStyle(color: Colors.black), // Change text color
+                          style: TextStyle(color: Colors.black),
                           decoration: InputDecoration(
                             hintText: 'Tìm kiếm ...',
-                            hintStyle: TextStyle(
-                                color: ColorPalette
-                                    .subColorText), // Change hint text color
+                            hintStyle: TextStyle(color: ColorPalette.subColorText),
                             border: InputBorder.none,
                           ),
+                          onChanged: _onSearch, // Gọi hàm tìm kiếm khi có thay đổi
                         ),
                       ),
                       IconButton(
@@ -251,8 +268,26 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
+                // Expanded(
+                //   child: ListView(
+                //     children: [
+                //       // Hiển thị kết quả tìm kiếm
+                //       if (searchResults.isNotEmpty)
+                //         Column(
+                //           children: searchResults
+                //               .map((result) => ListTile(
+                //             title: Text(result.tenDiaDiem),
+                //             // Hiển thị các thông tin khác của result tùy ý
+                //             // Ví dụ: subtitle: Text(result.moTa),
+                //           ))
+                //               .toList(),
+                //         ),
+                //     ],
+                //   ),
+                // ),
               ],
             ),
+
           )
         ),
 
@@ -319,6 +354,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+
     );
   }
 }

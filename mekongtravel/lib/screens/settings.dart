@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mekongtravel/core/constants/color_constants.dart';
+import 'package:mekongtravel/core/constants/config.dart';
 import 'package:rolling_switch/rolling_switch.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'dart:core';
-
+import 'package:http/http.dart' as http;
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
 
@@ -16,6 +17,26 @@ class _SettingsState extends State<Settings> {
   void initState() {
     // TODO: implement initState
     super.initState();
+  }
+  void _handleLogout() async {
+    try {
+      // Gửi yêu cầu đến endpoint `/logout` trên server
+      var response = await http.post(
+        Uri.parse(logout),
+        // Các thông tin yêu cầu (nếu cần)
+      );
+
+      // Xử lý phản hồi từ server
+      if (response.statusCode == 200) {
+      print("Đăng xuất thành công!");
+      Navigator.pushReplacementNamed(context, '/login');
+      } else {
+        print("Đăng xuất thất bại!");
+      }
+    } catch (error) {
+      // Xử lý khi có lỗi xảy ra trong quá trình gửi yêu cầu
+      print('Error: $error');
+    }
   }
 
   @override
@@ -387,61 +408,67 @@ class _SettingsState extends State<Settings> {
                 SizedBox(
                   height: 12,
                 ),
-                Container(
-                  height: 76,
-                  width: 380,
-                  decoration: BoxDecoration(
-                    color: ColorPalette.text,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Stack(
-                    alignment: Alignment.centerLeft,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 14, right: 14),
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.language,
-                              size: 22,
-                              color: Color(0xFF31507F),
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text(
-                              'Đăng xuất',
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 0.2,
-                                color: Color(0xFF31507F),
-                              ),
-                            ),
-                          ],
+            InkWell(
+              onTap: () {
+                _handleLogout(); // Gọi hàm xử lý đăng xuất khi nhấn nút Đăng xuất
+              },
+            child:  Container(
+              height: 76,
+              width: 380,
+              decoration: BoxDecoration(
+                color: ColorPalette.text,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Stack(
+                alignment: Alignment.centerLeft,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 14, right: 14),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.language,
+                          size: 22,
+                          color: Color(0xFF31507F),
                         ),
-                      ),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Container(
-                              child: Icon(
-                                Icons.logout,
-                                color: Colors.black,
-                                size: 22,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 8,
-                            )
-                          ],
+                        SizedBox(
+                          width: 4,
                         ),
-                      ),
-                    ],
+                        Text(
+                          'Đăng xuất',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: 0.2,
+                            color: Color(0xFF31507F),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          child: Icon(
+                            Icons.logout,
+                            color: Colors.black,
+                            size: 22,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 8,
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ),
+
                 SizedBox(
                   height: 12,
                 ),

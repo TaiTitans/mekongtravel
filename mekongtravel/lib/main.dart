@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:mekongtravel/core/constants/dashboard.dart';
 import 'package:mekongtravel/screens/home_page.dart';
+import 'package:mekongtravel/screens/settings.dart';
 import 'package:mekongtravel/screens/sign_in.dart';
 import 'package:mekongtravel/screens/welcome_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -38,6 +39,13 @@ class MyApp extends StatelessWidget {
             fontFamily: 'BeVietnamPro',
             scaffoldBackgroundColor: ColorPalette.backgroundColor,
           ),
+          initialRoute: '/welcome', // Change the initial route
+          routes: {
+            '/welcome': (context) => WelcomeScreen(token: token),
+            '/login': (context) => SignIn(),
+            '/logout': (context) => Settings(),
+            // Other routes if needed
+          },
           home: WelcomeScreen(token: "token"),
         );
       }
