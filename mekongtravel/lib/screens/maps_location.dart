@@ -1,6 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:geolocator/geolocator.dart';
 
 void main() {
   runApp(const MapsScreen());
@@ -14,31 +15,20 @@ class MapsScreen extends StatefulWidget {
 }
 
 class _MapsScreenState extends State<MapsScreen> {
-  GoogleMapController? mapController;
-  LocationPermission? permission;
-  bool isPermissionGranted = false;
-  Position? position;
-  Set<Marker> markers = {};
+  final Completer<GoogleMapController> _controller =
+  Completer<GoogleMapController>();
 
-  @override
-  void initState() {
-    super.initState();
-    checkPermission();
-  }
+  static const CameraPosition _kGooglePlex = CameraPosition(
+    target: LatLng(37.42796133580664, -122.085749655962),
+    zoom: 14.4746,
+  );
 
-  void checkPermission() async {
-    permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-    }
+  static const CameraPosition _kLake = CameraPosition(
+      bearing: 192.8334901395799,
+      target: LatLng(37.43296265331129, -122.08832357078792),
+      tilt: 59.440717697143555,
+      zoom: 19.151926040649414);
 
-    if (permission != LocationPermission.deniedForever) {
-      setState(() {
-        isPermissionGranted = true;
-      });
-      getPosition();
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,81 +47,23 @@ class _MapsScreenState extends State<MapsScreen> {
           ],
         ),
       ),
-      body: Container(),
+      body: GoogleMap(
+        mapType: MapType.hybrid,
+        initialCameraPosition: _kGooglePlex,
+        onMapCreated: (GoogleMapController controller) {
+          _controller.complete(controller);
+        },
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: _goToTheLake,
+        label: const Text('To the lake!'),
+        icon: const Icon(Icons.directions_boat),
+      ),
     );
   }
 
-  void getPosition() async {
-    position = await Geolocator.getCurrentPosition();
-
-    mapController?.animateCamera(
-      CameraUpdate.newCameraPosition(
-        CameraPosition(
-          target: LatLng(position!.latitude, position!.longitude),
-          zoom: 16,
-        ),
-      ),
-    );
-
-    markers = {};
-
-    markers.add(
-      Marker(
-        markerId: MarkerId('current_location'),
-        icon: BitmapDescriptor.defaultMarker,
-        position: LatLng(position!.latitude, position!.longitude),
-      ),
-    );
-
-    for (var item in _listPlaces) {
-      markers.add(
-        Marker(
-          markerId: MarkerId(item.name),
-          position: LatLng(item.latitude, item.longitude),
-          icon: BitmapDescriptor.defaultMarker,
-          infoWindow: InfoWindow(
-            title: item.name,
-            snippet: item.address,
-          ),
-        ),
-      );
-    }
-
-    setState(() {});
+  Future<void> _goToTheLake() async {
+    final GoogleMapController controller = await _controller.future;
+    await controller.animateCamera(CameraUpdate.newCameraPosition(_kLake));
   }
-
-  final List<Place> _listPlaces = [
-    Place(
-      name: "Đại học Cần Thơ",
-      address: "Đường 3/2, Phường Xuân Khánh, Quận Ninh Kiều, Thành phố Cần Thơ",
-      latitude: 10.025584,
-      longitude: 105.755669,
-    ),
-    Place(
-      name: "Công viên Tuổi Trẻ",
-      address: "Công viên Tuổi Trẻ, Phường Xuân Khánh, Quận Ninh Kiều, Thành phố Cần Thơ",
-      latitude: 10.025898,
-      longitude: 105.756316,
-    ),
-    Place(
-      name: "Bảo tàng Cần Thơ",
-      address: "Phường Xuân Khánh, Quận Ninh Kiều, Thành phố Cần Thơ",
-      latitude: 10.025584,
-      longitude: 105.755669,
-    ),
-  ];
-}
-
-class Place {
-  String name;
-  String address;
-  double latitude;
-  double longitude;
-
-  Place({
-    required this.name,
-    required this.address,
-    required this.latitude,
-    required this.longitude,
-  });
 }

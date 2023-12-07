@@ -3,7 +3,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-   <application
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
         android:label="mekongtravel"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
@@ -24,8 +25,9 @@
               android:resource="@style/NormalTheme"
               />
 
-            <meta-data android:name="com.google.android.geo.API_KEY"
-                android:value="AIzaSyDQWYIzH_cYVyVWdmrg0mKd5r70pk-EBr8"/>
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyBLXQz2V2wvw4nJ8hueHjkbqOGX4Nyuc08"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

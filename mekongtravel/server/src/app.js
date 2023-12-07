@@ -22,5 +22,4 @@ app.get('/api/tinhthanh', async (req, res) => {
 
 
 
-
 module.exports = app;

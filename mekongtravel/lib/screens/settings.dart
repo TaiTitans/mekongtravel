@@ -28,8 +28,8 @@ class _SettingsState extends State<Settings> {
 
       // Xử lý phản hồi từ server
       if (response.statusCode == 200) {
-      print("Đăng xuất thành công!");
-      Navigator.pushReplacementNamed(context, '/login');
+        print("Đăng xuất thành công!");
+        Navigator.pushReplacementNamed(context, '/login');
       } else {
         print("Đăng xuất thất bại!");
       }
@@ -251,10 +251,10 @@ class _SettingsState extends State<Settings> {
                             ),
                             Container(
                                 child: Icon(
-                              Icons.arrow_forward_ios,
-                              color: Colors.black,
-                              size: 22,
-                            )),
+                                  Icons.arrow_forward_ios,
+                                  color: Colors.black,
+                                  size: 22,
+                                )),
                             SizedBox(
                               width: 8,
                             )
@@ -392,10 +392,10 @@ class _SettingsState extends State<Settings> {
                           children: [
                             Container(
                                 child: Icon(
-                              Icons.arrow_forward_ios,
-                              color: Colors.black,
-                              size: 22,
-                            )),
+                                  Icons.arrow_forward_ios,
+                                  color: Colors.black,
+                                  size: 22,
+                                )),
                             SizedBox(
                               width: 8,
                             )
@@ -408,66 +408,66 @@ class _SettingsState extends State<Settings> {
                 SizedBox(
                   height: 12,
                 ),
-            InkWell(
-              onTap: () {
-                _handleLogout(); // Gọi hàm xử lý đăng xuất khi nhấn nút Đăng xuất
-              },
-            child:  Container(
-              height: 76,
-              width: 380,
-              decoration: BoxDecoration(
-                color: ColorPalette.text,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Stack(
-                alignment: Alignment.centerLeft,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 14, right: 14),
-                    child: Row(
+                InkWell(
+                  onTap: () {
+                    _handleLogout(); // Gọi hàm xử lý đăng xuất khi nhấn nút Đăng xuất
+                  },
+                  child:  Container(
+                    height: 76,
+                    width: 380,
+                    decoration: BoxDecoration(
+                      color: ColorPalette.text,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Stack(
+                      alignment: Alignment.centerLeft,
                       children: [
-                        Icon(
-                          Icons.language,
-                          size: 22,
-                          color: Color(0xFF31507F),
+                        Padding(
+                          padding: EdgeInsets.only(left: 14, right: 14),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.language,
+                                size: 22,
+                                color: Color(0xFF31507F),
+                              ),
+                              SizedBox(
+                                width: 4,
+                              ),
+                              Text(
+                                'Đăng xuất',
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 0.2,
+                                  color: Color(0xFF31507F),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        SizedBox(
-                          width: 4,
-                        ),
-                        Text(
-                          'Đăng xuất',
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w500,
-                            letterSpacing: 0.2,
-                            color: Color(0xFF31507F),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Container(
+                                child: Icon(
+                                  Icons.logout,
+                                  color: Colors.black,
+                                  size: 22,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 8,
+                              )
+                            ],
                           ),
                         ),
                       ],
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                          child: Icon(
-                            Icons.logout,
-                            color: Colors.black,
-                            size: 22,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 8,
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            ),
+                ),
 
                 SizedBox(
                   height: 12,
@@ -502,8 +502,8 @@ class _SwitchExampleState extends State<SwitchExample> {
   bool light0 = true;
 
   final MaterialStateProperty<Icon?> thumbIcon =
-      MaterialStateProperty.resolveWith<Icon?>(
-    (Set<MaterialState> states) {
+  MaterialStateProperty.resolveWith<Icon?>(
+        (Set<MaterialState> states) {
       if (states.contains(MaterialState.selected)) {
         return const Icon(Icons.check);
       }

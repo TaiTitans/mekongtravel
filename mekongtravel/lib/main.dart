@@ -9,12 +9,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'core/constants/dataitems_constants.dart';
 import 'core/constants/color_constants.dart';
 import './screens/sign_in.dart';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences prefs = await SharedPreferences.getInstance();
   String? token = prefs.getString('token');
-
   runApp(MyApp(token: token));
 }
 
@@ -43,14 +42,13 @@ class MyApp extends StatelessWidget {
           routes: {
             '/welcome': (context) => WelcomeScreen(token: token),
             '/login': (context) => SignIn(),
-            '/logout': (context) => Settings(),
             // Other routes if needed
           },
-          home: WelcomeScreen(token: "token"),
+          home: token != null ? WelcomeScreen(token: token) : SignIn(),
         );
       }
     }
-    
+
     // Handle invalid token here, e.g., show a login screen.
     return MaterialApp(
       title: 'MekongTravel',
